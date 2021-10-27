@@ -181,7 +181,7 @@ router.post('/enquiry-submit',(req,res)=>{
   pool.query(`insert into enquiry set ?`,body,(err,result)=>{
     if(err) throw err;
     // else res.render('enquiry',{msg:'Successfully Submitted'})
-    else res.redirect('/enquiry')
+    else res.send('enquiry')
   })
 })
 
