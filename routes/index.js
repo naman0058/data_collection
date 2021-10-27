@@ -16,7 +16,7 @@ router.get('/admin/login',(req,res)=>{
 
 router.post('/admin/login/verification',(req,res)=>{
   console.log('dshj',req.body)
-pool.query(`select * from admin where email = '${req.body.email}' and password =${req.body.password}`,(err,result)=>{
+pool.query(`select * from admin where email = '${req.body.email}' and password ='${req.body.password}'`,(err,result)=>{
   if(err) throw err;
   else if(result[0]){
 
@@ -145,7 +145,7 @@ router.get('/partner/login',(req,res)=>{
 
 router.post('/partner/login/verification',(req,res)=>{
   console.log('dshj',req.body)
-pool.query(`select * from partner where number = '${req.body.number}' and password =${req.body.password}`,(err,result)=>{
+pool.query(`select * from partner where number = '${req.body.number}' and password ='${req.body.password}'`,(err,result)=>{
   if(err) throw err;
   else if(result[0]){
 

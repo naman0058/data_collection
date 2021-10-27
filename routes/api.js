@@ -5,7 +5,7 @@ var pool = require('./pool')
 
 
 router.get('/get-top-banner',(req,res)=>{
-    pool.query(`select * from coins`,(err,result)=>{
+    pool.query(`select * from brands`,(err,result)=>{
       if(err) throw err;
       else res.json(result)
     })
