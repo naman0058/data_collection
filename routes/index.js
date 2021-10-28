@@ -182,7 +182,7 @@ var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 
-today = mm + '/' + dd + '/' + yyyy;
+today = yyyy + '-' + mm + '-' + dd;
 
   body['date'] = today;
   body['vendorid'] = req.session.partner;
@@ -193,5 +193,27 @@ today = mm + '/' + dd + '/' + yyyy;
   })
 })
 
+
+
+router.get('/report',(req,res)=>{
+  if(req.session.propertyadmin){
+    res.render('report')
+
+  }
+  else{
+    res.render('admin-login',{msg:'Invalid Credentials'})
+
+  }
+})
+
+
+router.post('/show-reports',(req,res)=>{
+  let body = req.body;
+  console.log('dd',req.body)
+  pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername from enquiry e where e.date between '${req.body.from_date}' and '${req.body.to_date}' order by id desc`,(err,result)=>{
+    if(err) throw err;
+    else res.json(result)
+  })
+})
 
 module.exports = router;
