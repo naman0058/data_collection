@@ -3,12 +3,12 @@ var mysql = require('mysql')
 require('dotenv').config()
 
 const pool = mysql.createPool({
-  host:'167.71.231.201',
+  host:'db-mysql-blr1-08836-do-user-8036869-0.b.db.ondigitalocean.com',
   ///host : 'localhost',
-   user: 'root',
-  password:'123a@8Anmanraspaa123a@*Anmanraspaa',
+   user: 'doadmin',
+  password:'oLPb0Pm6EphQK501',
     database: 'data_collection',
-    port:'3306' ,
+    port:'22060' ,
     multipleStatements: true
   })
 
