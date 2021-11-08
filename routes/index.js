@@ -175,16 +175,21 @@ router.get('/enquiry',(req,res)=>{
 
 
 
+
 router.post('/enquiry-submit',(req,res)=>{
   let body = req.body;
   var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
 
+
   body['date'] = today;
+  body['time'] = time;
   body['vendorid'] = req.session.partner;
   pool.query(`insert into enquiry set ?`,body,(err,result)=>{
     if(err) throw err;

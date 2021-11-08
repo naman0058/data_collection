@@ -74,6 +74,8 @@ function makeTable(board){
           <table class="table align-items-center table-dark table-flush">
             <thead class="thead-dark">
               <tr>
+              <th scope="col">S. No.</th>
+
                 <th scope="col">Name</th>
                 <th scope="col">Number</th>
                 <th scope="col">Address</th>
@@ -86,7 +88,17 @@ function makeTable(board){
             <tbody>
                   <tr>`
                   $.each(board, function(i, item) {
-                    table += `<th scope="row">
+                    table += `
+                    
+                    <th scope="row">
+                    <div class="media align-items-center">
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">${i+1}</span>
+                      </div>
+                    </div>
+                  </th>
+                    
+                    <th scope="row">
                       <div class="media align-items-center">
                         <div class="media-body">
                         <a href='/partner-enquiry?id=${item.id}'>  <span class="mb-0 text-sm">${item.name}</span> </a>

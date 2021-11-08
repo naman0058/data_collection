@@ -191,6 +191,8 @@
                   <table class="table align-items-center table-dark table-flush" id="tab1">
                     <thead class="thead-dark">
                       <tr>
+                        <th scope="col">S. No.</th>
+
                         <th scope="col">Vendor Name</th>
 
                         <th scope="col"> Name</th>
@@ -205,6 +207,8 @@
 
                        <th scope="col">Martial Status</th>
                        <th scope="col">Date</th>
+                       <th scope="col">Time</th>
+
 
                    
                       </tr>
@@ -212,6 +216,15 @@
                     <tbody>
                           <tr>
                          <% for(i=0;i<result.length;i++){ %>
+
+
+                          <th scope="row">
+                            <div class="media align-items-center">
+                              <div class="media-body">
+                                <span class="mb-0 text-sm"><%=i+1%> </span>
+                              </div>
+                            </div>
+                          </th>
 
                           <th scope="row">
                             <div class="media align-items-center">
@@ -305,6 +318,14 @@
                               </th>
                            
         
+                              <th scope="row">
+                                <div class="media align-items-center">
+                                  <div class="media-body">
+                                    <span class="mb-0 text-sm"><%=result[i].time%></span>
+                                  </div>
+                                </div>
+                              </th>
+
                
                  
                           
