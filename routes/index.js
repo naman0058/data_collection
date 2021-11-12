@@ -39,7 +39,10 @@ router.get('/logout',(req,res)=>{
 
 router.get('/admin',(req,res)=>{
   if(req.session.propertyadmin){
-    pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername from enquiry e order by id desc limit 20`,(err,result)=>{
+    pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername,
+  (select e.name from event e where e.id = e.eventid) as eventname
+    
+    from enquiry e order by id desc limit 20`,(err,result)=>{
       if(err) throw err;
       else res.render('admin',{result})
     })
@@ -57,6 +60,17 @@ router.get('/admin',(req,res)=>{
 router.get('/partner',(req,res)=>{
   if(req.session.propertyadmin){
     res.render('partner')
+
+  }
+  else{
+    res.render('admin-login',{msg:'Invalid Credentials'})
+  }
+})
+
+
+router.get('/add-event',(req,res)=>{
+  if(req.session.propertyadmin){
+    res.render('event')
 
   }
   else{
@@ -107,7 +121,11 @@ router.post('/partner/update', (req, res) => {
 
 
 router.get('/all-enquiry',(req,res)=>{
-  pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername from enquiry e order by id desc`,(err,result)=>{
+  pool.query(`select e.* , 
+  (select p.name from partner p where p.id = e.vendorid) as partnername,
+  (select e.name from event e where e.id = e.eventid) as eventname
+  
+  from enquiry e order by id desc`,(err,result)=>{
     if(err) throw err;
     else res.render('show_enquiry',{result:result})
   })
@@ -117,7 +135,10 @@ router.get('/all-enquiry',(req,res)=>{
 
 
 router.get('/partner-enquiry',(req,res)=>{
-  pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername from enquiry e
+  pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername,
+  (select e.name from event e where e.id = e.eventid) as eventname
+  
+  from enquiry e
               where vendorid = '${req.query.id}' order by id desc`,(err,result)=>{
     if(err) throw err;
     else res.render('show_enquiry',{result:result})
@@ -191,11 +212,33 @@ today = yyyy + '-' + mm + '-' + dd;
   body['date'] = today;
   body['time'] = time;
   body['vendorid'] = req.session.partner;
-  pool.query(`insert into enquiry set ?`,body,(err,result)=>{
-    if(err) throw err;
-    // else res.render('enquiry',{msg:'Successfully Submitted'})
-    else res.send('enquiry')
-  })
+
+
+console.log(req.body)
+
+pool.query(`select * from enquiry where number = '${req.body.number}'`,(err,result)=>{
+  if(err) throw err;
+  else if(result[0]){
+    res.json({msg:'Mobile Number Already Exists'})
+  }
+  else{
+   pool.query(`select * from enquiry where email = '${req.body.email}'`,(err,result)=>{
+     if(err) throw err;
+     else if(result[0]){
+      res.json({msg:'Email ID Already Exists'})
+     }
+     else {
+      pool.query(`insert into enquiry set ?`,body,(err,result)=>{
+        if(err) throw err;
+        else res.json({msg:'Successfully Submitted'})
+        // else res.send('enquiry')
+      })
+     }
+   })
+  }
+})
+
+ 
 })
 
 
@@ -220,5 +263,62 @@ router.post('/show-reports',(req,res)=>{
     else res.json(result)
   })
 })
+
+
+
+
+router.post('/event/insert',(req,res)=>{
+	let body = req.body
+	console.log(req.body)
+	pool.query(`insert into event set ?`,body,(err,result)=>{
+		if(err) throw err;
+		else res.json({
+			status:200
+		})
+	})
+})
+
+
+
+router.get('/event/show',(req,res)=>{
+	pool.query(`select * from event`,(err,result)=>{
+		err ? console.log(err) : res.json(result)
+	})
+})
+
+
+
+router.get('/event/delete', (req, res) => {
+    const { id } = req.query
+    pool.query(`delete from event where id = ${id}`, (err, result) => {
+        if(err) throw err;
+        else res.json(result);
+    })
+})
+
+router.post('/event/update', (req, res) => {
+    console.log(req.body)
+    pool.query(`update event set ? where id = ?`, [req.body, req.body.id], (err, result) => {
+        if(err) throw err;
+        else res.json(result);
+    })
+})
+
+
+
+router.get('/event-enquiry',(req,res)=>{
+  pool.query(`select e.* , 
+  (select p.name from partner p where p.id = e.vendorid) as partnername,
+  (select e.name from event e where e.id = e.eventid) as eventname
+   from enquiry e
+              where eventid = '${req.query.id}' order by id desc`,(err,result)=>{
+    if(err) throw err;
+    else res.render('show_enquiry',{result:result})
+    // else res.json(result)
+  })
+})
+
+
+
 
 module.exports = router;

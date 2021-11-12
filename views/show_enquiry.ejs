@@ -96,6 +96,14 @@
               </a>
             </li>
 
+
+            <li class="nav-item">
+              <a class="nav-link" href="/add-event">
+                <i class="ni ni-collection text-primary"></i> Add Event
+
+              </a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="/all-enquiry">
                 <i class="ni ni-diamond text-primary"></i>All Enquiry
@@ -192,6 +200,7 @@
                     <thead class="thead-dark">
                       <tr>
                         <th scope="col">S. No</th>
+                        <th scope="col">Event Name</th>
 
                         <th scope="col">Vendor Name</th>
 
@@ -223,6 +232,14 @@
                             <div class="media align-items-center">
                               <div class="media-body">
                                 <span class="mb-0 text-sm"><%=i+1%> </span>
+                              </div>
+                            </div>
+                          </th>
+
+                          <th scope="row">
+                            <div class="media align-items-center">
+                              <div class="media-body">
+                                <span class="mb-0 text-sm"><%=result[i].eventname%> </span>
                               </div>
                             </div>
                           </th>

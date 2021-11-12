@@ -97,6 +97,14 @@
               </a>
             </li>
 
+
+            <li class="nav-item">
+              <a class="nav-link" href="/add-event">
+                <i class="ni ni-collection text-primary"></i> Add Event
+
+              </a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="/all-enquiry">
                 <i class="ni ni-diamond text-primary"></i>All Enquiry
@@ -294,6 +302,12 @@ else {
           <table class="table align-items-center table-dark table-flush" id='tab1'>
             <thead class="thead-dark">
               <tr>
+
+                <th scope="col">S.No.</th>
+
+                
+                <th scope="col">Event Name</th>
+
                 <th scope="col">Vendor Name</th>
 
 <th scope="col"> Name</th>
@@ -327,6 +341,15 @@ else {
                             </th>
 
 
+
+                            <th scope="row">
+                            <div class="media align-items-center">
+                              <div class="media-body">
+                                <span class="mb-0 text-sm">${item.eventname} </span>
+                              </div>
+                            </div>
+                          </th>
+                            
                           <th scope="row">
                             <div class="media align-items-center">
                               <div class="media-body">
