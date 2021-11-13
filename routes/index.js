@@ -188,9 +188,11 @@ router.get('/enquiry',(req,res)=>{
       if(err) throw err;
       else if(result[0]){
         let eventid = result[0].eventid;
-        pool.query(`select * from event where id = '${eventid}'`,(err,result)=>{
+        var query = `select count(id) as counter from enquiry where vendorid = '${req.session.partner}' and date = CURDATE();`
+        var query2 = `select * from event where id = '${eventid}'`
+        pool.query(query+query2,(err,result)=>{
           if(err) throw err;
-          res.render('enquiry',{msg:'',eventname:result[0].name})
+          res.render('enquiry',{msg:'',eventname:result[1][0].name,result})
 
         })
       }
