@@ -184,7 +184,21 @@ pool.query(`select * from partner where number = '${req.body.number}' and passwo
 
 router.get('/enquiry',(req,res)=>{
   if(req.session.partner){
-    res.render('enquiry',{msg:''})
+    pool.query(`select * from enquiry where vendorid = '${req.session.partner}' and date = CURDATE() limit 1`,(err,result)=>{
+      if(err) throw err;
+      else if(result[0]){
+        let eventid = result[0].eventid;
+        pool.query(`select * from event where id = '${eventid}'`,(err,result)=>{
+          if(err) throw err;
+          res.render('enquiry',{msg:'',eventname:result[0].name})
+
+        })
+      }
+      else{
+        res.render('enquiry',{msg:'',event:''})
+
+      }
+    })
 
   }
   else{
@@ -228,11 +242,26 @@ pool.query(`select * from enquiry where number = '${req.body.number}'`,(err,resu
       res.json({msg:'Email ID Already Exists'})
      }
      else {
-      pool.query(`insert into enquiry set ?`,body,(err,result)=>{
-        if(err) throw err;
-        else res.json({msg:'Successfully Submitted'})
-        // else res.send('enquiry')
-      })
+    pool.query(`select * from enquiry where vendorid = '${req.session.partner}' and date = CURDATE() limit 1`,(err,result)=>{
+   if(err) throw err;
+   else if(result[0]){
+     body['eventid'] = result[0].eventid
+    pool.query(`insert into enquiry set ?`,body,(err,result)=>{
+      if(err) throw err;
+      else res.json({msg:'Successfully Submitted'})
+      // else res.send('enquiry')
+    })
+   }
+   else{
+    pool.query(`insert into enquiry set ?`,body,(err,result)=>{
+      if(err) throw err;
+      else res.json({msg:'Successfully Submitted'})
+      // else res.send('enquiry')
+    })
+   }
+
+    })
+    
      }
    })
   }
@@ -258,7 +287,10 @@ router.get('/report',(req,res)=>{
 router.post('/show-reports',(req,res)=>{
   let body = req.body;
   console.log('dd',req.body)
-  pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername from enquiry e where e.date between '${req.body.from_date}' and '${req.body.to_date}' order by id desc`,(err,result)=>{
+  pool.query(`select e.* , (select p.name from partner p where p.id = e.vendorid) as partnername,
+  (select e.name from event e where e.id = e.eventid) as eventname
+  
+  from enquiry e where e.date between '${req.body.from_date}' and '${req.body.to_date}' order by id desc`,(err,result)=>{
     if(err) throw err;
     else res.json(result)
   })
