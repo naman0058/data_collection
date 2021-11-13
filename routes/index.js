@@ -184,7 +184,7 @@ pool.query(`select * from partner where number = '${req.body.number}' and passwo
 
 router.get('/enquiry',(req,res)=>{
   if(req.session.partner){
-    pool.query(`select * from enquiry where vendorid = '${req.session.partner}' and date = CURDATE() limit 1`,(err,result)=>{
+    pool.query(`select * from enquiry where vendorid = '${req.session.partner}' and date = CURDATE()  limit 1`,(err,result)=>{
       if(err) throw err;
       else if(result[0]){
         let eventid = result[0].eventid;
