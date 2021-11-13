@@ -134,7 +134,7 @@
                       <div class="col-lg-6">
                         <div class="form-group">
                           <label class="form-control-label" for="input-email">Mobile Number *</label>
-                          <input type="text" maxlength="10" onkeypress="return onlyNumberKey(event)" id="number" name="number" class="form-control form-control-alternative"
+                          <input type="text" maxlength="10" minlength="10" onkeypress="return onlyNumberKey(event)" id="number" name="number" class="form-control form-control-alternative"
                             placeholder="Mobile Number">
                         </div>
                       </div>
@@ -256,6 +256,8 @@
 
 if( $('#name').val() == '' || $('#name').val() == [] ) alert('Enter Name')
 else if( $('#number').val() == '' || $('#number').val() == [] ) alert('Enter Number')
+else if($('#number').val().length!=10) alert('Enter Valid Mobile Number')
+
 else if( $('#email').val() == '' || $('#email').val() == [] ) alert('Enter Email')
 else if( $('#designation').val() == '' || $('#designation').val() == [] ) alert('Enter Deisgnation')
 else if( $('#nationality').val() == '' || $('#nationality').val() == [] ) alert('Select Nationality')

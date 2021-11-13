@@ -17,8 +17,10 @@ $.getJSON(`/${table}/show`, data => {
 
 
 $('.save').click(function(){
+ 
   if($('#name').val()==[] || $('#name').val()=="") alert('Enter Name')
   else if($('#number').val()==[] || $('#number').val()=="") alert('Enter Mobile Number')
+
   else if($('#password').val()==[] || $('#password').val()=="") alert('Enter Password')
   else if($('#address').val()==[] || $('#address').val()=="") alert('Enter Address')
 
