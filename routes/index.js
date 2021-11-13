@@ -197,7 +197,13 @@ router.get('/enquiry',(req,res)=>{
         })
       }
       else{
-        res.render('enquiry',{msg:'',event:''})
+        var query = `select count(id) as counter from enquiry where vendorid = '${req.session.partner}' and date = CURDATE();`
+        var query2 = `select count(id) as counter from enquiry where vendorid = '${req.session.partner}' and date = CURDATE();`
+        pool.query(query+query2,(err,result)=>{
+          if(err) throw err;
+          res.render('enquiry',{msg:'',result,eventname:''})
+
+        })
 
       }
     })
