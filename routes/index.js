@@ -56,6 +56,15 @@ router.get('/admin',(req,res)=>{
 
 
 
+router.get('/event/delete',(req,res)=>{
+  pool.query(`delete from enquiry where id = '${req.query.id}'`,(err,result)=>{
+    if(err) throw err;
+    else res.redirect('/admin');
+  })
+})
+
+
+
 
 router.get('/partner',(req,res)=>{
   if(req.session.propertyadmin){
@@ -183,20 +192,10 @@ pool.query(`select * from partner where number = '${req.body.number}' and passwo
 
 
 router.get('/enquiry',(req,res)=>{
+  console.log(req.session.partner)
   if(req.session.partner){
-    pool.query(`select * from enquiry where vendorid = '${req.session.partner}' and date = CURDATE()  limit 1`,(err,result)=>{
-      if(err) throw err;
-      else if(result[0]){
-        let eventid = result[0].eventid;
-        var query = `select count(id) as counter from enquiry where vendorid = '${req.session.partner}' and date = CURDATE();`
-        var query2 = `select * from event where id = '${eventid}'`
-        pool.query(query+query2,(err,result)=>{
-          if(err) throw err;
-          res.render('enquiry',{msg:'',eventname:result[1][0].name,result})
 
-        })
-      }
-      else{
+    
         var query = `select count(id) as counter from enquiry where vendorid = '${req.session.partner}' and date = CURDATE();`
         var query2 = `select count(id) as counter from enquiry where vendorid = '${req.session.partner}' and date = CURDATE();`
         pool.query(query+query2,(err,result)=>{
@@ -205,8 +204,7 @@ router.get('/enquiry',(req,res)=>{
 
         })
 
-      }
-    })
+      
 
   }
   else{

@@ -217,6 +217,7 @@
                        <th scope="col">Martial Status</th>
                        <th scope="col">Date</th>
                        <th scope="col">Time</th>
+                       <th scope="col">Action</th>
 
 
                    
@@ -339,6 +340,16 @@
                                 <div class="media align-items-center">
                                   <div class="media-body">
                                     <span class="mb-0 text-sm"><%=result[i].time%></span>
+                                  </div>
+                                </div>
+                              </th>
+
+
+
+                              <th scope="row">
+                                <div class="media align-items-center">
+                                  <div class="media-body">
+                                   <a href="/event/delete?id=<%=result[i].id%>"><button type="button" class="btn btn-danger">Delete</button></a>
                                   </div>
                                 </div>
                               </th>
