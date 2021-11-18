@@ -359,4 +359,18 @@ router.get('/event-enquiry',(req,res)=>{
 
 
 
+router.get('/about',(req,res)=>{
+  res.render('about')
+})
+
+
+router.get('/faq',(req,res)=>{
+  res.render('faq')
+})
+
+
+router.get('/contact',(req,res)=>{
+  res.render('contact')
+})
+
 module.exports = router;
