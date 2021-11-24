@@ -12,7 +12,13 @@ router.get('/admin/login',(req,res)=>{
   res.render('admin-login',{msg:''})
 })
 
+router.get('/visa',(req,res)=>{
+  res.render('visa',{msg:''})
+})
 
+router.get('/migrate',(req,res)=>{
+  res.render('migrate',{msg:''})
+})
 
 router.post('/admin/login/verification',(req,res)=>{
   console.log('dshj',req.body)
