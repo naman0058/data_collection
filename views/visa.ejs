@@ -1,459 +1,759 @@
-
-<!DOCTYPE html>
-
-<html id="ctl00_htmlTag" xmlns="https://www.w3.org/1999/xhtml" lang="en" dir="" xml:lang="en">
-<head>
-<script type="text/javascript">
- var musafir = musafir || {};
- musafir.serverConfiguration = musafir.serverConfiguration || {};
- musafir.serverConfiguration.locale = "en-US";
- musafir.serverConfiguration.cdn = "";
- musafir.serverConfiguration.apicdn = "apiae.musafir.com";
- musafir.serverConfiguration.sharedCookieDomain = ".musafir.com";
- musafir.serverConfiguration.facebookID = "1774943292732682";
- musafir.serverConfiguration.googlePlusID = "866015587625-l406co2tglgbid7pm1gg72cll4tthmeh.apps.googleusercontent.com";
- musafir.serverConfiguration.microserviceBaseUrl = "https://services.musafir.com";
- musafir.serverConfiguration.webApiUrl = "https://apiae.musafir.com";
- musafir.serverConfiguration.leadTimeToTravelInHours = {
-  "musafir": 4,
-  "b2c": 24,
-  "b2e": 24
- };
- musafir.serverConfiguration.exchangeRateForGTM = 0.2723;
- musafir.serverConfiguration.TATrackerUrl = "http://www.tripadvisor.com/img/cdsi/partner/transparent_pixel-27022-3.gif";
-
- musafir.serverConfiguration.isAllowedToShortlist =  false;
- musafir.serverConfiguration.shortlistingThresholds = {
-  "OneWay": 0,
-  "Hotel": 0,
-  "RoundTrip": 0,
-  "RoundTripForSideBySide": 0,
-  "RoundTripPackagedOrMulticity": 0,
-    };
-     musafir.serverConfiguration.BrandKeys = {
-  "BrandName": "Musafir"
-    };
-</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="https://www.musafir.com/Resource/Image/Icon/FavIcon/Favicon.ico" />
-<link href="https://www.musafir.com/Resource/Image/Icon/FavIcon/Musafir152x152.png" rel="apple-touch-icon" sizes='152x152'/>
-<link href="https://www.musafir.com/Resource/Image/Icon/FavIcon/Musafir76x76.png" rel="apple-touch-icon" sizes='76x76'/>
-<link href="https://www.musafir.com/Resource/Image/Icon/FavIcon/Musafir120x120.png" rel="apple-touch-icon" sizes='120x120'/>
-<link href="https://www.musafir.com/Resource/Image/Icon/FavIcon/Musafir60x60.png" rel="apple-touch-icon" sizes='60x60'/>
-<link href="https://www.musafir.com/Resource/Image/Icon/FavIcon/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
-<meta name="msapplication-square150x150logo" content="https://www.musafir.com/Resource/Image/Icon/FavIcon/Musafir150x150.png"/>
-<meta name="msapplication-TileImage" content="https://www.musafir.com/Resource/Image/Icon/FavIcon/Musafir150x150.png" />
-<meta name="msapplication-TileColor" content="#008ed6"/>
-<meta name="application-name" content="Musafir.com" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta id="viewport" name="viewport" content="width=321, user-scalable=no, minimal-ui" />
-<meta name="google-play-app" content="app-id=com.musafir.android" /><meta name="musafir-itunes-app" content="app-id=945606378" /><style>
-   @import url(https://www.musafir.com/Resource/Style/Default.css?42101);
-   @import url(https://www.musafir.com/Resource/Style/DefaultMobile.css?42101) (max-width:812px);
-  </style> 
-  <!-- For IE8 support-->
-  <!--[if lt IE 9]>
-   <link href="https://www.musafir.com/Resource/Style/Default.css?42101" rel="stylesheet" type="text/css" media="all"/> 
- <![endif]-->
-  <script type="text/javascript" src="https://www.musafir.com/Resource/JavaScript/Musafir.js?42101"></script>
-<script type="text/javascript" src="https://www.musafir.com/Resource/JavaScript/Musafir.blog.js?42101"></script><meta name="title" content="Get Tourist Visas Online For All The Countries -Musafir UAE"><meta name="description" content="Get all information regarding tourist visa  including visa rates, how and when to apply, etc. Easily apply for tourist & business visas online with Musafir.com"><meta name="keywords" content="visa, tourist visa, visit visa, visa online, UAE visa, UAE visit visa, dubai visit visa, UAE tourist visa"><link rel="canonical" href=" https://www.musafir.com/visa/"><link rel="alternate" hreflang="en-ae" href="https://www.musafir.com/Visa"/>
-
-<meta name="Generator" content="Sitefinity 8.2.5950.0 SE" /><title>
-	Get Tourist &amp; Business Visas Online For All The Countries  - Musafir
-</title></head>
-
-<body id="ctl00_masterBody" data-unresolved="" class=" noScrol l seamless visaPage ">
-	<form method="post" action="./Visa" id="visatypeFormDetails">
-<div class="aspNetHidden">
-<input type="hidden" name="ctl00_ctl02_TSM" id="ctl00_ctl02_TSM" value="" />
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="ctl00_ctl03_TSSM" id="ctl00_ctl03_TSSM" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="XqDIxEm7eJLwjNVlOPtiUK9XXgWRGvDHz49lxO8GB+0msUwdBDLfmEfjGtBpl2iAIImrEGpBdV6dZ+7i4dFS10Sjpcm51Kui/d+yKAURhmOatMe0EZaa/l3JaH6/ckRv9dt5NQljow3N5yz3GNKWgGrfyFNyGYXUt97hX5DuOBfC7ZC1kxAm1Z1Fo5VEaxlqP04z2tD0akGRlKJqtXbiI837xwGWjw28MtIwUTKBBg5UMSz8FAMQPa6Yqa7fPfT3VjSxtunce8fpVIzfsmC8FexVz+rpTL8F8X62V9qwQd9IDWizZ5GUeZIp1DlXiX3v6rIVGDUq/2aYPzzuGlUCxq0xZAM55Lrl1NGVZTcM1Bdm2x4E45vJ0+z9QiE3fQByZ7LaaRd6gx7/8OQSLou7IS1mOE0=" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['visatypeFormDetails'];
-if (!theForm) {
-    theForm = document.visatypeFormDetails;
+<%- include ('./header.ejs') %>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
+
+body{
+    display: flex;
+    align-items: center;
+   
+   
+}
+
+.wrapper{
+    max-width: 1090px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.wrapper .table{
+    background: #fff;
+    width: calc(33% - 20px);
+    padding: 30px 30px;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1020px){
+    .wrapper .table{
+        width: calc(50% - 20px);
+        margin-bottom: 40px;
     }
 }
-//]]>
-</script>
 
-
-<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMlSNVMEy6x-S8OSHSFOm7k0FrYQQNft-sYKlISaDbHOqdlEvg2&amp;t=637460981481343508" type="text/javascript"></script>
-
-
-<script type="text/javascript">
-//<![CDATA[
-var musafir = musafir || {}; musafir.ui = musafir.ui || {}; musafir.ui.form = musafir.ui.form || {}; musafir.ui.form.MyLogin = musafir.ui.form.MyLogin || {} ;musafir.ui.form.MyLogin.CallServer = function(arg, context){WebForm_DoCallback('ctl00$panoramaContentPlaceHolder$C003',arg,musafir.ui.form.MyLogin.HandleResult,"",null,true);}; var __cultureInfo = {"name":"en","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"$","NaNSymbol":"NaN","CurrencyNegativePattern":0,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"M/d/yyyy","ShortTimePattern":"h:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":false,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]},"eras":[1,"A.D.",null,0]};//]]>
-</script>
-
-<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvo_3M3cvHP9yEtnYWkpXAuZgJmFRxLbQj9rREbMJdodLKfJPaUAcFfioqvbAf8oFVH5UNvdfQPGwgi1E7tAz6ZcRBR2mF3AQg03Fys5yDVQ9KVylY8ENxDcCwvI-erPENtLSofs1&amp;t=2fe674eb" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OAu0PBfQ1qHOSBXXx1xGKmGDaz6MUeoA9GTS6cFoci0QnlAGD29EFITWGKMbCG9VLZ-NjM0iNSzYH9PXwwtR7iQT7wTNF7QZGnHNASG7TUyX_UuVv_cJza_b4DBCzn2lHvfGSUM1&amp;t=2fe674eb" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=txOWT0IWXM4wZRbIbHwGn6MogrCHs8pAoMeX7MfqJqPOPTIu-LGA1m9g4cEhzblk1hvrF0FlhhlmGhKp932IISYH0bHiaA0LPUrowUNRt6ibDBzP70Ov9ZJO39pxAyFbtyZWFbHif7JVWJfybdevItzbT7D2mO2_wR-RW1Oe1XqrK0z30&amp;t=ffffffffcde64c65" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=SuYCzQWRU5sdiMz0dhJW-i0w-3yuyzfyIaeGeoskQpAGWJbmo-cw7bHT4s2OgSCHKT-J9z6Uv6OBYuUm4e34og3wC_7D7LZa3kHVhXuYpj1UYD4sRxzJAA1yEVrBc2qCaRVNnYeTvU4pGBpZg3RfL4a8d0Q1&amp;t=ffffffffcde64c65" type="text/javascript"></script>
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B4223D45" />
-</div><script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ctl02', 'visatypeFormDetails', [], [], [], 90, 'ctl00');
-//]]>
-</script>
-<input type="hidden" name="ctl00$ctl02" id="ctl00_ctl02" />
-<script type="text/javascript">
-//<![CDATA[
-Sys.Application.setServerId("ctl00_ctl02", "ctl00$ctl02");
-Sys.Application._enableHistoryInScriptManager();
-//]]>
-</script>
-<%- include ('./header.ejs') %>
-		<input type="hidden" name="ctl00$HiddenMusafirAppUrl$hdnMusafirAppUrl" id="hdnMusafirAppUrl" value="https://cfapp.musafir.com" />
-		<div id="page" itemscope="" itemtype="https://schema.org/Place">
-			
-
-
-
-			
-				<div id="panorama">
-					<div id="panoramaPanel">
-						<div class="visaTheme">
-							
-<style>
-@media screen and (max-width: 813px){
-.visaThemePanel li.visaDays {
-    width: 120px;
-    display: inline-block;
-    vertical-align: top;
- }
+@media (max-width: 698px){
+    .wrapper .table{
+        width: 100%;
+    }
 }
+
+.table .price-section{
+   display: flex;
+   justify-content: center;
+}
+
+.price-section .price-area{
+    height: 120px;
+    width: 120px;
+    background: #ffd861;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.price-section .price-area .inner-area{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    color: #fff;
+    line-height: 117px;
+    text-align: center;
+    position: relative;
+}
+
+.price-area .inner-area .text{
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: 17px;
+}
+
+.price-area .inner-area .price{
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.table .package-name{
+    width: 100%;
+    height: 2px;
+    background: #ffecb3;
+    margin: 35px 0;
+    position: relative;
+}
+
+.table .package-name::before{
+    position: absolute;
+    content: "Basic";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    font-size: 25px;
+    padding: 0 10px;
+    font-weight: bolder;
+}
+
+.table .features li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.features li .list-name{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.features li .icon{
+    font-size: 15px;
+}
+
+.features li .icon.check{
+    color: #2db94d;
+}
+
+.features li .icon.cross{
+    color: #cd3241;
+}
+
+.table .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.table .btn button{
+    width: 80%;
+    height: 50px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.basic .price-area,
+.basic .inner-area{
+    background: #ffd861;
+}
+
+.basic .btn button{
+    background: #fff;
+    color: #ffd861;
+    border: 2px solid #ffd861;
+}
+
+.basic .btn button:hover{
+    border-radius: 6px;
+    background: #ffd861;
+    color: #fff;
+}
+
+.Premium .price-area,
+.Premium .inner-area{
+    background: #a26bfa;
+}
+
+.Premium .btn button{
+    background: #fff;
+    color: #a26bfa;
+    border: 2px solid #a26bfa;
+}
+
+.Premium .btn button:hover{
+    border-radius: 6px;
+    background: #a26bfa;
+    color: #fff;
+}
+
+.Ultimate .price-area,
+.Ultimate .inner-area{
+    background: #43ef8b;
+}
+
+.Ultimate .btn button{
+    background: #fff;
+    color: #43ef8b;
+    border: 2px solid #43ef8b;
+}
+
+.Ultimate .btn button:hover{
+    border-radius: 6px;
+    background: #43ef8b;
+    color: #fff;
+}
+
+.basic .package-name{
+    background: #ffecb3;
+}
+
+.Premium .package-name{
+    background: #a26bfa;
+}
+
+.Ultimate .package-name{
+    background: #43ef8b;
+}
+
+.basic .package-name::before{
+    content: "Basic";
+}
+
+.Premium .package-name::before{
+    content: "Premium";
+}
+
+.Ultimate .package-name::before{
+    content: "Ultimate";
+}
+
+.basic ::selection,
+.basic .price-area,
+.basic .inner-area{
+    background: #ffd861;
+}
+
+.Premium ::selection,
+.Premium .price-area,
+.Premium .inner-area{
+    background: #a26bfa;
+}
+
+.Ultimate ::selection,
+.Ultimate .price-area,
+.Ultimate .inner-area{
+    background: #43ef8b;
+}
+
+
 </style>
-<div class="visaLocation">
-        <i class="icon icon-location"></i><input id="keyword" type="text" placeholder="I am looking for a visa to">
-        <a href="javascript:void(0)" id="searchbtn">Go</a>
-       </div>
-     <div class="visaThemePanel">
-      <ul>
-       <li class="visaDays"><a href="https://www.musafir.com/Visa/dubai-visa" title="" class="" target="" style="color: #ffffff"><span><i></i>United Arab Emirates</span></a></li>
- <li class="visaDays"><a href="https://www.musafir.com/visa/visa/2018/09/27/usa-visa" title="" class="" target="" style="color: #ffffff"><span><i></i>United States of America</span></a></li>
-       <li class="visaDays"><a href="https://www.musafir.com/visa/visa/2016/09/25/schengen-visas" title="" class="" target="" style="color: #ffffff"><span><i></i>Schengen visa</span></a></li>
-       <li class="visaDays"><a href="https://www.musafir.com/visa/visa/2016/09/08/united-kingdom-visa" title="" class="" target="" style="color: #ffffff"><span><i></i>United Kingdom</span></a></li>
-     </ul>
-     </div>
 
-
-<script type="text/javascript"> var axel = Math.random() + ""; var a = axel * 10000000000000; document.write('<iframe src="https://6736461.fls.doubleclick.net/activityi;src=6736461;type=invmedia;cat=jzprsqhw;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>'); </script>
-<script src="https://apis.google.com/js/client.js"></script>
-<script type="text/javascript" src="https://www.musafir.com/Resource/JavaScript/Musafir.login.js?42101"></script>
-
-	<header>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-	</header>
-
-<div id="ctl00_panoramaContentPlaceHolder_C003_dTrackYourVisa" class="visaThemebutton">
-	<span>
-		Already applied ?</span>
-	<a id="ctl00_panoramaContentPlaceHolder_C003_aTrackYourVisa" class="button tertiaryVisa" tabindex="1" onclick="musafir.ui.form.MyLogin.showHideMyTripSignInSlidePanel(&#39;ctl00_panoramaContentPlaceHolder_C003_&#39;);">
-		TRACK YOUR VISA</a>
-</div>
-<div id="ctl00_panoramaContentPlaceHolder_C003_divMyTripSignInSlidePanel" class="slidePanel hidden">
-	<div id="ctl00_panoramaContentPlaceHolder_C003_divMyTripOverlay" class="overlay" onclick="musafir.ui.form.MyLogin.showHideMyTripSignInSlidePanel(&#39;ctl00_panoramaContentPlaceHolder_C003_&#39;);"></div>
-	<div class="item">
-		<h6>
-			<span id="ctl00_panoramaContentPlaceHolder_C003_lblTripName"></span>
-			<a id="ctl00_panoramaContentPlaceHolder_C003_aMyTrip" class="close" tabindex="1" onclick="musafir.ui.form.MyLogin.showHideMyTripSignInSlidePanel(&#39;ctl00_panoramaContentPlaceHolder_C003_&#39;);">
-				Close</a></h6>
-		<span id="ctl00_panoramaContentPlaceHolder_C003_lblMessage"></span>
-		<div class="musafirLogin">
-			<ul class="form1">
-				<li>
-					<fieldset class="email">
-						<input name="ctl00$panoramaContentPlaceHolder$C003$txtEmailAddress" type="text" maxlength="128" id="ctl00_panoramaContentPlaceHolder_C003_txtEmailAddress" class="text" placeholder="Email address" onkeydown="return (event.keyCode!=13);" />
-					</fieldset>
-				</li>
-				<li>
-					<fieldset class="systemReference">
-						<input name="ctl00$panoramaContentPlaceHolder$C003$txtSystemReference" type="text" maxlength="8" id="ctl00_panoramaContentPlaceHolder_C003_txtSystemReference" class="text" placeholder="Musafir booking reference" onkeydown="if (event.keyCode == 13) document.getElementById(&#39;ctl00_panoramaContentPlaceHolder_C003_btnSignIn&#39;).click(); return (event.keyCode!=13);" />
-					</fieldset>
-				</li>
-				<li>
-					<input name="ctl00$panoramaContentPlaceHolder$C003$btnSignIn" type="button" id="ctl00_panoramaContentPlaceHolder_C003_btnSignIn" class="submit button" data-element="button" data-loading="" data-element-disabled-in-process="" value="VIEW TRIP" onclick="musafir.ui.form.MyLogin.InitiateValidation(this.id,&#39;ctl00_panoramaContentPlaceHolder_C003_&#39;);" /></li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-
-
-						</div>
-					</div>
-				</div>
-			
-			
-			<input name="ctl00$hdnTagCategory" type="hidden" id="ctl00_hdnTagCategory" class="hdnTagClass" />
-			
-			
-			<div id="content" class="resolved" data-destroyed-effects="transition appearFromTop ">
-				
-				
-
-
-<div id="homePanel">
- <div class="deals">
-  
-  
-  <h1 class="hidden">
-   Top visas</h1>
-  <!-- 2015.3.930.40 -->
-    <ul>
+<a id='qodef-back-to-top' href='#'>
+  <span class="qodef-btt-text">TOP</span>
+  </a>
+  <div class="qodef-content">
+  <div class="qodef-content-inner">
+  <div class="qodef-title-holder qodef-centered-type qodef-title-va-header-bottom qodef-preload-background qodef-has-bg-image qodef-bg-parallax" style="height: 520px;background-color: #f8f8f8;background-image:url(/images/dubai1.jpg);" data-height="520">
+  <div class="qodef-title-image">
+  <img itemprop="image" src="/images/dubai1.jpg" alt="d" />
+  </div>
+  <div class="qodef-title-wrapper" style="height: 520px">
+  <div class="qodef-title-inner">
+  <div class="qodef-grid">
+  <span class="qodef-page-subtitle">Destinations</span>
+  <h1 class="qodef-page-title entry-title">VISA</h1>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="qodef-container">
+    <div class="qodef-container-inner clearfix qodef-tour-item-single-holder">
+  <div class="qodef-tour-item-section qodef-information-section qodef-tab-container" id="tour-item-info-id">
+    <div class="qodef-grid-row qodef-grid-large-gutter">
+    <div class="qodef-grid-col-8">
      
-    <li class="clickable" data-tag="UAE-Tourist-Visa,visa,UAE-visa,dubai-visit-visa,Dubai-Visa,dubai-tourist-visa,Abu-Dhabi-Visa" style="height: 100px;">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl0_imgPost" data-src="//do9f0cpkv689t.cloudfront.net/SFImage/Images/unitedarabemiratesa89300e413a06dce84b1ff000062a8f2.png" alt="UAE Tourist Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl0_lnkTitle" title="UAE Tourist Visa" href="/Visa/dubai-visa">UAE Tourist Visa</a></h3>
-     <span><em>From AED</em> 99</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="TOURIST-VISA,visa,UAE-visa,Inside-country-Visa-extension,Extend-your-UAE-tourist-Visa,Dubai-Visa,Abu-Dhabi-Visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl1_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/UnitedArabEmirates.png" alt="Extend your UAE tourist Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl1_lnkTitle" title="Extend your UAE tourist Visa" href="/Visa/same-day-visa-change">Extend your UAE tourist Visa</a></h3>
-     <span><em>From AED</em> 899</span>
-    </li>
-   
-    <li style="height: 100px;"  class="clickable" data-tag="dubai-expo,expo-2020-dubai-tickets,expo-2020-tickets,expo-2020-dubai,expo-tickets,Expo-2020,dubai-expo-2020">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl2_imgPost" data-src="//do9f0cpkv689t.cloudfront.net/SFImage/Images/unitedarabemiratesa89300e413a06dce84b1ff000062a8f2.png" alt="UAE Tourist Visa and Expo 2020" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl2_lnkTitle" title="UAE Tourist Visa and Expo 2020" href="/Visa/uae-tourist-visa-and-expo-2020">UAE Tourist Visa and Expo 2020</a></h3>
-     <span><em>From AED</em> 390</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="visa,Armenia-Visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl3_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Armenia.png" alt="Armenia Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl3_lnkTitle" title="Armenia Visa" href="/Visa/armenia-visa">Armenia Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="تأشيرة,تأشيرة-الهند">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl4_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/India.png" alt="India Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl4_lnkTitle" title="India Visa" href="/Visa/indian-visa">India Visa</a></h3>
-     <span><em>From AED</em> 500</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="visa,malaysia">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl5_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Malaysia.png" alt="Malaysian Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl5_lnkTitle" title="Malaysian Visa" href="/Visa/malaysian-visa">Malaysian Visa</a></h3>
-     <span><em>From AED</em> 300</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="تأ-شيرة,تأشيرو-سريلانكا">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl6_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/SriLanka.png" alt="Sri Lanka Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl6_lnkTitle" title="Sri Lanka Visa" href="/Visa/sri-lanka-visa">Sri Lanka Visa</a></h3>
-     <span><em>From AED</em> 200</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="تأشيرة,تأشيرة-تايلاند,visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl7_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Thailand.png" alt="Thailand Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl7_lnkTitle" title="Thailand Visa" href="/Visa/thailand-visa">Thailand Visa</a></h3>
-     <span><em>From AED</em> 350</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="تأشيرة,تأشيرة-سويسرا">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl8_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Switzerland.png" alt="Switzerland Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl8_lnkTitle" title="Switzerland Visa" href="/Visa/switzerland-visa">Switzerland Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="visa,greece">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl9_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Greece.png" alt="Greece Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl9_lnkTitle" title="Greece Visa" href="/Visa/greece-visa">Greece Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="Europe-visa,Schengen-visa,visa,germany">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl10_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Germany.png" alt="Germany Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl10_lnkTitle" title="Germany Visa " href="/Visa/germany-visa">Germany Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl11_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/BosniaAndHerzegovina.png" alt="Bosnia Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl11_lnkTitle" title="Bosnia Visa" href="/Visa/bosnia-visa">Bosnia Visa</a></h3>
-     <span><em>From AED</em> 275</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="Spain-Visa,visa,spain">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl12_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Spain.png" alt="Spain Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl12_lnkTitle" title="Spain Visa" href="/Visa/spain-visa">Spain Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="Hungary-visa,hungary">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl13_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Hungary.png" alt="Hungary Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl13_lnkTitle" title="Hungary Visa" href="/Visa/hungary-visa">Hungary Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="oman,visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl14_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Oman.png" alt="Oman Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl14_lnkTitle" title="Oman Visa" href="/Visa/oman-visas">Oman Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="europe,visa,Schengen-visa,Greece-Visa,Germany-Visa,Finland-Visa,Austria-Visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl15_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Europe.png" alt="Schengen Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl15_lnkTitle" title="Schengen Visa" href="/Visa/schengen-visas">Schengen Visa</a></h3>
-     <span><em>From AED</em> 150</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="US-tourist-visa,united-states-visa,visa,USA-Visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl16_imgPost" data-src="//do9f0cpkv689t.cloudfront.net/SFImage/Images/unitedstates.png" alt="USA Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl16_lnkTitle" title="USA Visa" href="/Visa/usa-visa">USA Visa</a></h3>
-     <span><em>From AED</em> 900</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="شينغين,لندن,سياحة,سياحة-أوروبا,سياحة-المملكة-المتحدة,تأشيرة-المملكة-المتحدة,المملكة-المتحدة,visa,United-Kingdom">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl17_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/UnitedKingdom.png" alt="United Kingdom Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl17_lnkTitle" title="United Kingdom Visa" href="/Visa/united-kingdom-visa">United Kingdom Visa</a></h3>
-     <span><em>From AED</em> 750</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="visa,Canada-Visa">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl18_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Canada.png" alt="Canada Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl18_lnkTitle" title="Canada Visa" href="/Visa/canada-visa">Canada Visa</a></h3>
-     <span><em>From AED</em> 250</span>
-    </li>
-   
-    <li style="height: 100px;" class="clickable" data-tag="visa,singapore">
-     <div>
-      <img id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl19_imgPost" data-src="https://www.musafir.com/Resource/Image/Icon/Flag/Large/Singapore.png" alt="Singapore Visa" />
-     </div>
-     <h3>
-      <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl19_lnkTitle" title="Singapore Visa" href="/Visa/singapore-visa">Singapore Visa</a></h3>
-     <span><em>From AED</em> 290</span>
-    </li>
-   
-    </ul>
-   <input id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ClientState" name="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ClientState" type="hidden" /><span id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater" style="display:none;"></span>
-  
- </div>
+      <html lang="en">
+
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Pricing</title>
+          <link rel="stylesheet" href="./pricing.css">
+          <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+        </head>
+        
+        <body>
+          <div class="wrapper">
+            <h3>Prices for Children - Dubai Tourist Visa + Medical Insurance (COVID)</h3>
+            <div class="table basic">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">14</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+            <div class="table Premium">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">30</span>
+                  </div>
+                </div>
+              </div>
+              <div >
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+            <div class="table Ultimate">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">90</span>
+                  </div>
+                </div>
+              </div>
+              <div >
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+<h3>Prices for Dubai Tourist Visa + Medical Insurance (COVID)</h3>
+            <div class="table basic">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">14</span>
+                  </div>
+                </div>
+              </div>
+              <div >
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+            <div class="table Premium">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">30</span>
+                  </div>
+                </div>
+              </div>
+              <div >
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+            <div class="table Ultimate">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">90</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+
+<h3>Prices for Dubai Express Tourist Visa + Medical Insurance (COVID)</h3>
+              <div class="table basic">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">30</span>
+                  </div>
+                </div>
+              </div>
+              <div >
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+            <div class="table Premium">
+              <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                   
+                    <span class="price">90</span>
+                  </div>
+                </div>
+              </div>
+              <div >
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">days Tourist Visa</span>
+                  <span class="icon check">   </span>
+                </li>
+                <li>
+                  <span class="list-name">Embassy fees</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Medical Insurance (COVID)</span>
+                  <span class="icon cross"><i class="far fa-times-circle"></i></span>
+                </li>
+               
+                <div class="btn"><button>AED 99*</button></div>
+              </div>
+            </div>
+            <div >
+              <!-- <div class="price-section">
+                <div class="price-area">
+                  <div class="inner-area">
+                    <span class="text">
+                      &#8377;
+                    </span>
+                    <span class="price">99</span>
+                  </div>
+                </div>
+              </div>
+              <div class="package-name">
+        
+              </div>
+              <div class="features">
+                <li>
+                  <span class="list-name">All Existing Template</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">100% Responsive Design</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Credit Remove Permission</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <li>
+                  <span class="list-name">Lifetime Template Updates</span>
+                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
+                </li>
+                <div class="btn"><button>Purchase</button></div>
+              </div> -->
+            </div>
+          </div>
+        </body>
+        
+        </html>
+        <div><h3>Pay online</h3></div>
+
+<br>
+
+<p>Enter your credit or debit card details to purchase a UAE tourist visa.</p>
+
+<br>
+
+<a style="float: left;"><img alt="Upload-Documents UAE visit visa" src="/SFImage/Images/upload-documents.png" data-displaymode="Original" title="Upload-Documents UAE visit visa"></a> 
+
+<div><h3>Upload your documents</h3></div>
+
+<br>
+
+<p>Upload coloured copies of the front and back of your passport. Also, upload a photograph with white background</p>
+
+<br>
+
+<a style="float: left;"><img alt="Download UAE e-visa" src="/SFImage/Images/download-e-visa9ad403e413a06dce84b1ff000062a8f2.png" data-displaymode="Original" title="Download UAE e-visa"></a> 
+
+<div><h3>Download your e-visa</h3></div>
+
+<br>
+
+<p>Keep track of your UAE visa status and get Dubai visa on mail.</p>
+
+<br>
+
+<p>We always do our best to give our customers the lowest price on UAE tourist visas.  But if you find a lower qualified price on 30, 90 or airport to airport visas, we'll be happy to match it. That's a Musafir.com guarantee. Visit your nearest <a href="https://www.musafir.com/About/Default.aspx#actionBarSection2" title="" class=""><strong>Musafir branch</strong></a> or call 600544405 for more information. <!-- You can even WhatsApp us on +971 6 513 9908. --></p>
+
+
+<!--
+<h3 id="prices">Prices for Dubai Tourist Visa + Medical Insurance (COVID)</h3>
+
+<div class="compare">
+
+
+<div>
+<h2><span>14<em> days Tourist Visa</em></span></h2>
+<p><span>AED 365*</span></p>
+<ul>
+    <li><em class="iconGrey icon-check"></em>Embassy fees</li>
+    <li><em class="iconGrey icon-check"></em>Medical Insurance (COVID)</li>
+</ul>
+<span class="bookNow webInvisible"><a class="button primary" tabindex="1" href="#infoPanel">Apply now</a></span>
+
 </div>
-<span></span>
-			</div>
-			
-	<div id="footer">
-		<ul id="tertiaryNavigation">
-			<li><a href="/About/Default.aspx" rel="nofollow">About</a></li><li><a href="/Contact/Default.aspx" rel="nofollow">Contact</a></li><li><a href="/Sitemap" rel="nofollow">Sitemap</a></li><li><a href="/Terms/Default.aspx" rel="nofollow">Terms</a></li><li><a href="/Privacy/Default.aspx" rel="nofollow">Privacy policy</a></li>
-			<li>
-				<span id="ctl00_ctrlFooter_lblCopyright">&copy; Universal Travels &amp; Tourism LLC </span></li>
-		</ul>
-		<ul id="follow">
-			<li class="iata"><img src="https://www.musafir.com/Resource/Image/Logo/IATA.png"></li><li class="tripAdvisor">
-      <svg xmlns="https://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 158 29" width="158" height="29">
-       <defs>
-          <filter id="filtersPicture">
-            <feComposite result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />
-            <feColorMatrix id="filter_38" type="saturate" values="0" data-filterid="38" />
-         </filter>
-       </defs>
-      <image filter="url(&quot;#filtersPicture&quot;)" x="5" y="0" width="100" height="20" xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="https://www.tripadvisor.com/img/cdsi/langs/en/tripadvisor_logo_158x29-27022-0-en_US.gif" />
-      </svg>
-     </li><li><a href="https://www.facebook.com/musafirdotcom" rel="nofollow" class="facebook">Facebook</a></li><li><a href="https://www.twitter.com/musafirdotcom" rel="nofollow" class="twitter" >Twitter</a></li><li><a href="https://www.linkedin.com/company/musafir-com" rel="nofollow" class="linkedin">LinkedIn</a></li>
-		</ul>
-	</div>
 
 
 
-			
-<div class="hidden">
- <script type="text/javascript">
- var dataLayer = dataLayer || [];
- dataLayer.push({
-   "userType": musafir.utility.cookie.get("userType"),
-  "source": musafir.utility.cookie.get("source"),
-  "url": musafir.utility.pathName,
-  "language" : musafir.configuration.locale.language
- });
- </script>
- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PK687X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK687X');</script>
+<div>
+
+<h2><span>30<em> days Tourist Visa</em></span></h2>
+<p><span>AED 375*</span></p>
+<ul>
+    <li><em class="iconGrey icon-check"></em>Embassy fees</li>
+    <li><em class="iconGrey icon-check"></em>Medical Insurance (COVID)</li>
+</ul>
+<span class="bookNow webInvisible"><a class="button primary" tabindex="1" href="#infoPanel">Apply now</a></span>
 </div>
 
-		</div>
-	
+ <div class="Offer">
 
-<script type="text/javascript">
-//<![CDATA[
+<h2><span>90<em> days Tourist Visa</em></span></h2>
+<em class="tag"></em>
 
-var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdTXQQWPU5LCe5Pt2VtuX9_wHvdkSGb2WuigZcDaL7reSXAowXg2&t=637460981481343508';
-WebForm_InitCallback();Sys.Application.add_init(function() {
-    $create(Telerik.Sitefinity.Web.UI.UserPreferences, {"_timeOffset":"0","_userBrowserSettingsForCalculatingDates":true,"timeZoneDisplayName":"UTC","timeZoneId":"UTC"}, null, null);
-});
-//]]>
-</script>
-</form>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon='{"rayId":"6b28386f7d356eca","token":"500541ecabb847f9b695e7733249421b","version":"2021.11.0","si":100}' crossorigin="anonymous"></script>
-</body>
-</html>
+<p><span>AED 850*</span></p>
+<ul>
+    <li><em class="iconGrey icon-check"></em>Embassy fees</li>
+    <li><em class="iconGrey icon-check"></em>Medical Insurance (COVID)</li>
+</ul>
+<span class="bookNow webInvisible"><a class="button primary" tabindex="1" href="#infoPanel">Apply now</a></span>
+</div>
+
+</div>
+
+
+
+
+
+<h3 id="prices">Prices for Children - Dubai Tourist Visa + Medical Insurance (COVID)</h3>
+
+<div class="compare">
+
+
+<div>
+
+<h2><span>14<em> days Tourist Visa</em></span></h2>
+<p><span>AED 99*</span></p>
+<ul><li><em class="iconGrey icon-check"></em>Embassy fees</li><li><em class="iconGrey icon-check"></em>Medical&nbsp;Insurance (COVID)</li></ul>
+<span class="bookNow webInvisible"><a class="button primary" tabindex="1" href="#infoPanel">Apply now</a></span>
+</div>
+
+<div>
+
+<h2><span>30<em> days Tourist Visa</em></span></h2>
+<p><span>AED 99*</span></p>
+<ul><li><em class="iconGrey icon-check"></em>Embassy fees</li><li><em class="iconGrey icon-check"></em>Medical&nbsp;Insurance (COVID)</li></ul>
+<span class="bookNow webInvisible"><a class="button primary" tabindex="1" href="#infoPanel">Apply now</a></span>
+</div>
+
+ <div class="Offer">
+
+<h2><span>90<em> days Tourist Visa</em></span></h2>
+<em class="tag"></em>
+
+<p><span>AED 199*</span></p>
+<ul><li><em class="iconGrey icon-check"></em>Embassy fees</li><li><em class="iconGrey icon-check"></em>Medical&nbsp;Insurance (COVID)</li></ul>
+<span class="bookNow webInvisible"><a class="button primary" tabindex="1" href="#infoPanel">Apply now</a></span>
+</div>
+
+</div>
+-->
+
+
+
+<p class="fineprint" style="clear: both;">*Prices listed are inclusive of VAT charges.</p>
+
+
+<p><span style="font-size: 14px; font-weight: bold;">How to track Dubai visa status,  validity online using your passport</span></p>
+
+ <ol> 
+<li>Visit <a href="https://smartservices.ica.gov.ae/echannels/web/client/default.html#/fileValidity" title="" class="">Smart Services ICA</a></li> 
+<li>Select passport information</li> 
+<li>Select either 'residency' or 'visa'</li> 
+<li>Enter passport number and passport expiry date</li> 
+<li>Enter nationality from the dropdown on the right. A corresponding number will appear on the box on the left.</li> 
+<li>Select the captcha check box and click on search. The page will now display your Dubai visa details along with date of expiry.</li> 
+</ol>
+<br>
+<p><span style="font-size: 14px; font-weight: bold;">What are the&nbsp;requirements for Dubai Visa?</span></p>
+
+ <ol> <li>A copy of guarantor's passport's first, last and visa pages</li> <li>A copy of your Emirates ID</li> <li>A copy of each visitor's passport's first and last pages</li> 
+<li>Each visitor's passport-size photograph, taken against a white background</li> <li>Each visitor's passport should have a minimum validity of 6 months</li> <li>If the visitor is your spouse, the same must be mentioned on your passport</li> <li>Additional cash deposit of up to AED 5,500 may be required for certain visitors (not applicable for family visas*).</li></ol>
+
+
+
+       
+
+    </div>
+    <div class="qodef-grid-col-3">
+      <div class="qodef-custom-nlf-sidearea">
+        <h4 class="qodef-custom-nlf-title">Apply Online</h4><span class="qodef-custom-nlf-text"></span>
+        <div class="qodef-grid-row qodef-grid-normal-gutter">
+        <div><span class="wpcf7-form-control-wrap your-name">
+          <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
+          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+            
+           
+              <option value="">Type of visa</option>
+              <option value="10387,10483">14 day UAE Visa</option>
+              <option value="10352,10483">30 day UAE Visa</option>
+              <option value="10354,10484">90 day UAE Visa</option>
+              <option value="10020">90 day UAE Visa - Multiple Entry</option>
+              <option value="7758,10483">30 day UAE Express Visa</option>
+              <option value="7763,10484">90 day UAE Express Visa</option>
+              <option value="11162,11187">30 day UAE (Abu Dhabi) Tourist Visa</option>
+              <option value="11163,11188">90 day UAE (Abu Dhabi) Tourist Visa</option>
+          </select>
+        </span></div>
+        <div><span class="wpcf7-form-control-wrap your-email">
+          <input type=""  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Nationality" />
+        </span></div>
+        <div><span class="wpcf7-form-control-wrap your-name">
+          <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
+          <label for="">Travelers:</label>
+          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+            
+           
+           <option value="1">1 adult</option>
+           <option value="2">2 adults</option>
+           <option value="3">3 adults</option>
+           <option value="4">4 adults</option>
+           <option value="5">5 adults</option>
+           <option value="6">6 adults</option>
+           <option value="7">7 adults</option>
+           <option value="8">8 adults</option>
+           <option value="9">9 adults</option>
+          </select>
+          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+            
+           
+          <option value="0">0 children</option>
+          <option value="1">1 child</option>
+          <option value="2">2 children</option>
+          <option value="3">3 children</option>
+          <option value="4">4 children</option>
+          <option value="5">5 children</option>
+          <option value="6">6 children</option>
+          <option value="7">7 children</option>
+          <option value="8">8 children</option>
+           </select>
+        </span></div>
+      </div>
+      <input type="submit" value="Apply" class="wpcf7-form-control wpcf7-submit" />
+    </div><div class="wpcf7-response-output" aria-hidden="true"></div>
+  </form></div> </div>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+
+  </div> 
+  </div>
+   
+  <%- include ('./footer.ejs') %>
