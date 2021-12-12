@@ -9,6 +9,14 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var api = require('./routes/api');
+var country = require('./routes/country');
+var state = require('./routes/state');
+var tour = require('./routes/tour');
+var visa = require('./routes/visa')
+var immigration_country = require('./routes/immigration_country');
+var immigration_subcategory = require('./routes/immigration_subcategory');
+var immigration_content = require('./routes/immigration_content');
+
 // var about = require('./routes/about');
 
 var app = express();
@@ -36,6 +44,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api',api);
+app.use('/country',country);
+app.use('/state',state);
+app.use('/tour',tour);
+app.use('/add-visa',visa);
+app.use('/immigration_country',immigration_country)
+app.use('/immigration_subcategory',immigration_subcategory);
+app.use('/immigration_content',immigration_content);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
