@@ -5,7 +5,14 @@ var pool = require('./pool')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var query = `select * from country;`
+  var query1 = `select * from state;`
+  var query2 = `select * from tour order by id desc;`
+  pool.query(query+query1+query2,(err,result)=>{
+    if(err) throw err;
+    else res.render('index', { title: 'Express',result });
+  })
+  
 });
 
 router.get('/admin/login',(req,res)=>{
@@ -13,12 +20,52 @@ router.get('/admin/login',(req,res)=>{
 })
 
 router.get('/visa',(req,res)=>{
-  res.render('visa',{msg:''})
+  pool.query(`select * from visa`,(err,result)=>{
+    if(err) throw err;
+    else res.render('visa',{msg:'',result})
+  })
+  
 })
 
+
 router.get('/migrate',(req,res)=>{
-  res.render('migrate',{msg:''})
+  var query = `select * from immigration_country;`
+  var query1 = `select * from immigration_subcategory;`
+  pool.query(query+query1,(err,result)=>{
+    if(err) throw err;
+    else res.render('migrate',{msg:'',result})
+  })
+  
 })
+
+
+
+router.get('/immigration/:countryname/:cityname',(req,res)=>{
+ 
+pool.query(`select id from immigration_country where name = '${req.params.countryname}'`,(err,result)=>{
+  if(err) throw err;
+  else {
+    let countryid = result[0].id;
+    pool.query(`select id from immigration_subcategory where name = '${req.params.cityname}'`,(err,result)=>{
+      if(err) throw err;
+      else {
+        let stateid = result[0].id;
+
+pool.query(`select * from immigration_content where countryid = '${countryid}' and stateid = '${stateid}' `,(err,result)=>{
+  if(err) throw err;
+  else res.json(result)
+})
+      }
+    })
+  }
+})
+
+
+})
+
+
+
+
 
 router.post('/admin/login/verification',(req,res)=>{
   console.log('dshj',req.body)

@@ -38,11 +38,18 @@
     </div>
     <div class="qodef-tours-list-holder-inner qodef-tours-row-inner-holder qodef-outer-space">
     <div class="qodef-tours-list-grid-sizer"></div>
+    
+
+    <% let j = 0 %>
+    <% for(i=0;i<result[0].length;i++) { %>
+
+     
+    
     <div class="qodef-tours-standard-item qodef-tours-row-item qodef-item-space post-3325 tour-item type-tour-item status-publish has-post-thumbnail hentry tour-category-skiing tour-attribute-5-star-accommodation tour-attribute-airport-transfer-2 tour-attribute-breakfast tour-attribute-personal-guide">
     <div class="qodef-tour-standard-item-holder">
     <div class="qodef-tour-standard-item-holder-inner">
     <div class="qodef-tours-standard-item-image-holder">
-    <a href="../../tour-item/active-winter/index.html">
+    <a href="#">
     <img width="1100" height="650" src="/images/canada.jpg" class="attachment-full size-full" alt="f" loading="lazy" /> </a>
     </div>
     <div class="qodef-tours-standard-item-content-holder">
@@ -50,16 +57,26 @@
     <div class="qodef-tours-standard-item-content-inner">
     <div class="qodef-tours-standard-item-title-holder">
     <h4 class="qodef-tour-title">
-    <a href="../../tour-item/active-winter/index.html">CANADA</a>
+    <a href="#"><%=result[0][i].name%></a>
     </h4>
     </div>
     <div class="qodef-tours-standard-item-excerpt">
-    <a href="">* Visitor Visa</a><br>
-    <a href="">* Student Visa & Admission</a><br>
-    <a href="">* Business Visa</a> <br>
-    <a href="">* PR Visa – Express Entry</a><br>
-    <a href=""> * PR Visa – PNP</a> <br>
-    <a href="">* Dependent Visa</a>
+
+  
+<%
+
+const filteredData = result[1].filter(item => item.countryid == result[0][j].id);
+
+console.log('ff',result[0][0].id)
+
+%>
+
+
+
+
+<% for(k=0;k<filteredData.length;k++) { %>
+    <a href="/immigration/<%=result[0][i].name%>/<%=filteredData[k].name%>">* <%=filteredData[k].name%></a><br>
+  <% } %>
 
     </div>
    
@@ -67,67 +84,14 @@
     </div>
     </div>
     </div>
-    </div> <div class="qodef-tours-standard-item qodef-tours-row-item qodef-item-space post-3324 tour-item type-tour-item status-publish has-post-thumbnail hentry tour-category-skiing tour-attribute-5-star-accommodation tour-attribute-airport-transfer-2 tour-attribute-breakfast tour-attribute-personal-guide">
-    <div class="qodef-tour-standard-item-holder">
-    <div class="qodef-tour-standard-item-holder-inner">
-    <div class="qodef-tours-standard-item-image-holder">
-    <a href="../../tour-item/kids-ski-school/index.html">
-    <img width="1100" height="650" src="/images/aust.jpg" class="attachment-full size-full" alt="f" loading="lazy" /> </a>
-    </div>
-    <div class="qodef-tours-standard-item-content-holder">
+    </div> 
+<% j= j+1 %>
+    <% } %>
+
+
    
-    <div class="qodef-tours-standard-item-content-inner">
-    <div class="qodef-tours-standard-item-title-holder">
-    <h4 class="qodef-tour-title">
-    <a href="../../tour-item/kids-ski-school/index.html">AUSTRALIA</a>
-    </h4>
-    </div>
-    <div class="qodef-tours-standard-item-excerpt">
-        <a href="">* Visitor Visa</a><br>
-        <a href="">* Student Visa & Admission</a><br>
-        <a href="">* Business Visa</a> <br>
-        <a href="">* PR Visa </a><br>
-        
-        <a href="">* Dependent Visa</a>
-    
-        </div>
-   
-    </div>
-    </div>
-    </div>
-    </div>
-    </div> <div class="qodef-tours-standard-item qodef-tours-row-item qodef-item-space post-3322 tour-item type-tour-item status-publish has-post-thumbnail hentry tour-category-skiing tour-attribute-5-star-accommodation tour-attribute-airport-transfer-2 tour-attribute-breakfast tour-attribute-personal-guide">
-       
-            <div class="qodef-tour-standard-item-holder">
-            <div class="qodef-tour-standard-item-holder-inner">
-            <div class="qodef-tours-standard-item-image-holder">
-            <a href="../../tour-item/kids-ski-school/index.html">
-            <img width="1100" height="650" src="/images/ger.jpg" class="attachment-full size-full" alt="f" loading="lazy" /> </a>
-            </div>
-            <div class="qodef-tours-standard-item-content-holder">
-            
-            <div class="qodef-tours-standard-item-content-inner">
-            <div class="qodef-tours-standard-item-title-holder">
-            <h4 class="qodef-tour-title">
-            <a href="../../tour-item/kids-ski-school/index.html">GERMANY</a>
-            </h4>
-            </div>
-            <div class="qodef-tours-standard-item-excerpt">
-                <a href="">* Visitor Visa</a><br>
-                <a href="">* Student Visa & Admission</a><br>
-                <a href="">* Business Visa</a> <br>
-                <a href="">* PR Visa </a><br>
-                
-                <a href="">* Dependent Visa</a>
-            
-                </div>
-          
-            </div>
-            </div>
-            </div>
-            </div>
-            
-    </div> </div>
+ 
+ </div>
   
     
   
