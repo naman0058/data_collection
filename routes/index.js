@@ -40,29 +40,58 @@ router.get('/migrate',(req,res)=>{
 
 
 
-router.get('/immigration/:countryname/:cityname',(req,res)=>{
+
+router.get('/immigration/:countryname/:1',(req,res)=>{
+  console.log(req.params)
+ pool.query(`select id from immigration_country where name = '${req.params.countryname}'`,(err,result)=>{
+   if(err) throw err;
+   else {
+     // res.send(result[0])
+     let countryid = result[0].id;
+    
+     pool.query(`select * from immigration_subcategory where id = '1'`,(err,result)=>{
+       if(err) throw err;
+       else {
+       
+         let stateid = result[0].id;
+         console.log(stateid)
+          res.render('migrationdata',{countryid,stateid})
  
-pool.query(`select id from immigration_country where name = '${req.params.countryname}'`,(err,result)=>{
-  if(err) throw err;
-  else {
-    let countryid = result[0].id;
-    pool.query(`select id from immigration_subcategory where name = '${req.params.cityname}'`,(err,result)=>{
-      if(err) throw err;
-      else {
-        let stateid = result[0].id;
-
-pool.query(`select * from immigration_content where countryid = '${countryid}' and stateid = '${stateid}' `,(err,result)=>{
-  if(err) throw err;
-  else res.json(result)
-})
-      }
-    })
-  }
-})
-
-
-})
-
+ 
+       }
+     })
+   }
+ })
+ 
+ 
+ })
+ 
+ 
+ router.post('/immigration-details',(req,res)=>{
+   console.log(req.body)
+ pool.query(`select * from immigration_content where countryid = '${req.body.countryid}' and stateid = '${req.body.stateid}' `,(err,result)=>{
+   if(err) throw err;
+    else res.json(result)
+   // else res.render('migrationdata',{result:result})
+ })
+ })
+ 
+ 
+ router.get('/get/visa/:name',(req,res)=>{
+  res.render('visadata',{name:req.params.name})
+ })
+ 
+ 
+ 
+ router.post('/visa-details',(req,res)=>{
+   console.log(req.body)
+ pool.query(`select * from visa where name = '${req.body.name}' `,(err,result)=>{
+   if(err) throw err;
+    else res.json(result)
+   // else res.render('migrationdata',{result:result})
+ })
+ })
+ 
 
 
 

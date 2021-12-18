@@ -523,18 +523,16 @@ body{
   </div>
    
 
-<input type="hidden" name="" id="stateid" value="<%=stateid%>">
-<input type="hidden" name="" id="countryid" value="<%=countryid%>">
+<input type="hidden" name="" id="countryid" value="<%=name%>">
 
 
   <%- include ('./footer.ejs') %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
 
-    let stateid = $('#stateid').val()
-    let countryid = $('#countryid').val()
+    let name = $('#countryid').val()
     // console/log()
-        $.post('/immigration-details',{stateid,countryid},data=>{
+        $.post('/visa-details',{name},data=>{
     
           console.log(data)
     
