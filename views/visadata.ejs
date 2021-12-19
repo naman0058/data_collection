@@ -237,6 +237,16 @@ body{
 }
 
 
+.table {
+  border: 1px solid black;
+}
+.th {
+  border: 1px solid black;
+} 
+.td {
+  border: 1px solid black;
+}
+
 </style>
 
 <a id='qodef-back-to-top' href='#'>
@@ -274,69 +284,85 @@ body{
           <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
         </head>
         
-        <body>
-          <div class="wrapper" id="contentcome">
-            
-             
-            <div >
-              <!-- <div class="price-section">
-                <div class="price-area">
-                  <div class="inner-area">
-                    <span class="text">
-                      &#8377;
-                    </span>
-                    <span class="price">99</span>
-                  </div>
-                </div>
-              </div>
-              <div class="package-name">
-        
-              </div>
-              <div class="features">
-                <li>
-                  <span class="list-name">All Existing Template</span>
-                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
-                </li>
-                <li>
-                  <span class="list-name">100% Responsive Design</span>
-                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
-                </li>
-                <li>
-                  <span class="list-name">Credit Remove Permission</span>
-                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
-                </li>
-                <li>
-                  <span class="list-name">Lifetime Template Updates</span>
-                  <span class="icon check"><i class="fas fa-check-circle"></i></span>
-                </li>
-                <div class="btn"><button>Purchase</button></div>
-              </div> -->
-            </div>
-          </div>
-        </body>
+      
         
         </html>
-        <div><h3>Pay online</h3></div>
+        <div><h3> Visa</h3></div>
 
 <br>
 
-<p>Enter your credit or debit card details to purchase a UAE tourist visa.</p>
+<p><%=result[0].description1%></p>
+
+<p><%=result[0].description2%></p>
+
+
+<br>
+<div><h5>Price</h5>
+  <table class="grid highlight" width="450" style="border: 1px solid black;"> 
+    <thead>
+      <tr style="border: 1px solid black;"> 
+        <th style="border: 1px solid black;">Service</th>
+        <th style="border: 1px solid black;">Service charges </th> 
+      </tr> 
+    </thead>
+    <tbody>
+      <tr> 
+        <td style="border: 1px solid black;"><%=result[0].service%></td> 
+        <td style="border: 1px solid black;"><%=result[0].service_charge%></td>
+      </tr>
+    </tbody>
+    
+  </table>
+</div>
+
 
 <br>
 
-<a style="float: left;"><img alt="Upload-Documents UAE visit visa" src="/SFImage/Images/upload-documents.png" data-displaymode="Original" title="Upload-Documents UAE visit visa"></a> 
+<p><span style="font-size: 14px; font-weight: bold;">Price includes</span></p>
 
-<div><h3>Upload your documents</h3></div>
+
+<div id="price_includes">
+
+</div>
+
+<input type="hidden" name="" id="prices" value="<%=name%>">
+
+
 
 <br>
+<p><span style="font-size: 14px; font-weight: bold;">What do I need to apply</span></p>
 
-<p>Upload coloured copies of the front and back of your passport. Also, upload a photograph with white background</p>
+
+<div id="applything">
+
+</div>
+
+
 
 <br>
+<table class="grid highlight" width="450" style="border: 1px solid black;"> 
 
-<a style="float: left;"><img alt="Download UAE e-visa" src="/SFImage/Images/download-e-visa9ad403e413a06dce84b1ff000062a8f2.png" data-displaymode="Original" title="Download UAE e-visa"></a> 
+  <thead> <tr> 
+  <th style="border: 1px solid black;"><strong>Store Location</strong></th>
+  <th style="border: 1px solid black;"><strong>Contact no.</strong></th>  </tr> </thead> 
+  
+  <tbody> 
+  <tr> <td style="border: 1px solid black;">Dubai (Deira)</td> 
+  <td style="border: 1px solid black;">04 - 3578 111</td> 
+   </tr>
+  <tr> <td style="border: 1px solid black;">Dubai (Al Quoz)</td><td style="border: 1px solid black;">04 - 3883 455</td></tr> 
+  <tr> <td style="border: 1px solid black;">Dubai (DIFC)</td><td style="border: 1px solid black;">04 - 3635 777</td></tr> 
+   <tr> <td style="border: 1px solid black;">Sharjah (Rolla)</td> <td style="border: 1px solid black;">06 - 5635 333</td></tr> 
+   <tr> <td style="border: 1px solid black;">Sharjah (H.O.)</td> <td style="border: 1px solid black;">600 544 405</td></tr> 
+   <tr> <td style="border: 1px solid black;">Sharjah (Saif Zone)</td> <td style="border: 1px solid black;">06 - 5572 000</td></tr>
+   <tr> <td style="border: 1px solid black;">Abu Dhabi (Mussafah)</td> <td style="border: 1px solid black;">02 - 5533 853</td></tr>
+   <tr> <td style="border: 1px solid black;">Abu Dhabi (Hamdan Bin Mohammed Street)</td> <td style="border: 1px solid black;">02 - 6222 633</td></tr>
+   <tr> <td style="border: 1px solid black;">Ras Al Khaimah (Al Nakheel)</td> <td style="border: 1px solid black;"> 07 - 2333 386</td></tr>
+    
+   
+  </tbody> </table>
 
-<div><h3>Download your e-visa</h3></div>
+<!-- <div><h3>Download your e-visa</h3></div>
 
 <br>
 
@@ -345,6 +371,7 @@ body{
 <br>
 
 <p>We always do our best to give our customers the lowest price on UAE tourist visas.  But if you find a lower qualified price on 30, 90 or airport to airport visas, we'll be happy to match it. That's a Musafir.com guarantee. Visit your nearest <a href="https://www.musafir.com/About/Default.aspx#actionBarSection2" title="" class=""><strong>Musafir branch</strong></a> or call 600544405 for more information. <!-- You can even WhatsApp us on +971 6 513 9908. --></p>
+ <br> -->
 
 
 <!--
@@ -432,24 +459,24 @@ body{
 
 
 
-<p class="fineprint" style="clear: both;">*Prices listed are inclusive of VAT charges.</p>
+<!-- <p class="fineprint" style="clear: both;">*Prices listed are inclusive of VAT charges.</p>
 
 
-<p><span style="font-size: 14px; font-weight: bold;">How to track Dubai visa status,  validity online using your passport</span></p>
+<p><span style="font-size: 14px; font-weight: bold;">How to track Dubai visa status,  validity online using your passport</span></p> -->
 
- <ol> 
+ <!-- <ol> 
 <li>Visit <a href="https://smartservices.ica.gov.ae/echannels/web/client/default.html#/fileValidity" title="" class="">Smart Services ICA</a></li> 
 <li>Select passport information</li> 
 <li>Select either 'residency' or 'visa'</li> 
 <li>Enter passport number and passport expiry date</li> 
 <li>Enter nationality from the dropdown on the right. A corresponding number will appear on the box on the left.</li> 
 <li>Select the captcha check box and click on search. The page will now display your Dubai visa details along with date of expiry.</li> 
-</ol>
+</ol> -->
 <br>
-<p><span style="font-size: 14px; font-weight: bold;">What are the&nbsp;requirements for Dubai Visa?</span></p>
+<!-- <p><span style="font-size: 14px; font-weight: bold;">What are the&nbsp;requirements for Dubai Visa?</span></p> -->
 
- <ol> <li>A copy of guarantor's passport's first, last and visa pages</li> <li>A copy of your Emirates ID</li> <li>A copy of each visitor's passport's first and last pages</li> 
-<li>Each visitor's passport-size photograph, taken against a white background</li> <li>Each visitor's passport should have a minimum validity of 6 months</li> <li>If the visitor is your spouse, the same must be mentioned on your passport</li> <li>Additional cash deposit of up to AED 5,500 may be required for certain visitors (not applicable for family visas*).</li></ol>
+ <!-- <ol> <li>A copy of guarantor's passport's first, last and visa pages</li> <li>A copy of your Emirates ID</li> <li>A copy of each visitor's passport's first and last pages</li> 
+<li>Each visitor's passport-size photograph, taken against a white background</li> <li>Each visitor's passport should have a minimum validity of 6 months</li> <li>If the visitor is your spouse, the same must be mentioned on your passport</li> <li>Additional cash deposit of up to AED 5,500 may be required for certain visitors (not applicable for family visas*).</li></ol> -->
 
 
 
@@ -458,11 +485,18 @@ body{
     </div>
     <div class="qodef-grid-col-3">
       <div class="qodef-custom-nlf-sidearea">
-        <h4 class="qodef-custom-nlf-title">Apply Online</h4><span class="qodef-custom-nlf-text"></span>
+        <form action='/get-visa/<%=name%>/apply' method='post'>
+        <h4 class="qodef-custom-nlf-title"><%=msg%></h4><span class="qodef-custom-nlf-text"></span>
+
+        <h4 class="qodef-custom-nlf-title">Contact us</h4><span class="qodef-custom-nlf-text"></span>
         <div class="qodef-grid-row qodef-grid-normal-gutter">
         <div><span class="wpcf7-form-control-wrap your-name">
-          <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
-          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <input type="text" required name="name"  id='name' size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=" Name" />
+          <input type="email" required name="email" id="email"  size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Email " /> 
+          <input type="number" required name="number" id="number" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=" Contact no." /> 
+
+           
+          <!-- <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
               <option value="">Type of visa</option>
@@ -474,15 +508,15 @@ body{
               <option value="7763,10484">90 day UAE Express Visa</option>
               <option value="11162,11187">30 day UAE (Abu Dhabi) Tourist Visa</option>
               <option value="11163,11188">90 day UAE (Abu Dhabi) Tourist Visa</option>
-          </select>
+          </select> -->
         </span></div>
-        <div><span class="wpcf7-form-control-wrap your-email">
+        <!-- <div><span class="wpcf7-form-control-wrap your-email">
           <input type=""  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Nationality" />
-        </span></div>
-        <div><span class="wpcf7-form-control-wrap your-name">
+        </span></div> -->
+        <!-- <div><span class="wpcf7-form-control-wrap your-name"> -->
           <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
-          <label for="">Travelers:</label>
-          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <!-- <label for="">Travelers:</label> -->
+          <!-- <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
            <option value="1">1 adult</option>
@@ -494,8 +528,8 @@ body{
            <option value="7">7 adults</option>
            <option value="8">8 adults</option>
            <option value="9">9 adults</option>
-          </select>
-          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          </select> -->
+          <!-- <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
           <option value="0">0 children</option>
@@ -507,10 +541,15 @@ body{
           <option value="6">6 children</option>
           <option value="7">7 children</option>
           <option value="8">8 children</option>
-           </select>
-        </span></div>
-      </div>
-      <input type="submit" value="Apply" class="wpcf7-form-control wpcf7-submit" />
+           </select> -->
+        <!-- </span></div>
+      </div> -->
+      <div><span class="wpcf7-form-control-wrap your-email">
+       
+      <label >  <p> <input type="checkbox">  Yes, send me the best deals by email</p></label>
+    </span>
+    </div>
+      <input type="submit" value="CONTACT ME" class="wpcf7-form-control wpcf7-submit" />
     </div><div class="wpcf7-response-output" aria-hidden="true"></div>
   </form></div> </div>
     </div>
@@ -530,15 +569,24 @@ body{
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
 
-    let name = $('#countryid').val()
+    let name = $('#prices').val()
+    // alert(name)
     // console/log()
         $.post('/visa-details',{name},data=>{
     
           console.log(data)
     
           let table = `<span>
-            ${data[0].content}
+            ${data[0].price_include}
             </span>`
-            $('#contentcome').html(table)
+
+
+            let table1 = `<span>
+            ${data[0].apply_thing}
+            </span>`
+            $('#price_includes').html(table)
+            $('#applything').html(table1)
+
+
         })
       </script>

@@ -78,9 +78,43 @@ router.get('/immigration/:countryname/:1',(req,res)=>{
  
  
  router.get('/get/visa/:name',(req,res)=>{
-  res.render('visadata',{name:req.params.name})
+   pool.query(`select * from visa where name = '${req.params.name}'`,(err,result)=>{
+     if(err) throw err;
+     else res.render('visadata',{name:req.params.name,result,msg:''})
+   })
+  
  })
  
+
+
+ router.post('/get-visa/:name/apply',(req,res)=>{
+   let body = req.body;
+
+
+   var today = new Date();
+   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+   
+   var dd = String(today.getDate()).padStart(2, '0');
+   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+   var yyyy = today.getFullYear();
+   
+   today = yyyy + '-' + mm + '-' + dd;
+   
+   
+     body['date'] = today;
+     body['time'] = time;
+
+   pool.query(`insert into contact_us set ?`,body,(err,result)=>{
+     if(err) throw err;
+     else {
+      pool.query(`select * from visa where name = '${req.params.name}'`,(err,result)=>{
+        if(err) throw err;
+        else res.render('visadata',{name:req.params.name,result,msg:'Successfully submitted...'})
+      })
+     
+     }
+   })
+ })
  
  
  router.post('/visa-details',(req,res)=>{
@@ -454,5 +488,95 @@ router.get('/faq',(req,res)=>{
 router.get('/contact',(req,res)=>{
   res.render('contact')
 })
+
+
+
+router.post('/subscription-details-insert',(req,res)=>{
+  let body = req.body;
+  console.log(req.body)
+  pool.query(`insert into subscription set ?`,body,(err,result)=>{
+    if(err) throw err;
+    else res.json({msg:'success'})
+  })
+})
+
+
+router.post('/tour-search',(req,res)=>{
+  console.log(req.body)
+  pool.query(`select * from state where countryid = '${req.body.countryid}'`,(err,result)=>{
+    if(err) throw err;
+    // else res.json(result)
+    else res.render('state_show',{result})
+  })
+})
+
+
+router.get('/details/:name/tour-search',(req,res)=>{
+  pool.query(`select * from tour where stateid = '${req.params.name}'`,(err,result)=>{
+    if(err) throw err;
+    else res.render('tour_show',{result})
+  })
+})
+
+
+
+router.post('/migrationdata/insert',(req,res)=>{
+
+  let body = req.body;
+  var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+
+
+  body['date'] = today;
+  body['time'] = time;
+  pool.query(`insert into migration_apply set ?`,body,(err,result)=>{
+    if(err) throw err;
+    else res.json({msg:'success'})
+  })
+})
+
+
+
+
+router.get('/all-immigration',(req,res)=>{
+  pool.query(`select e.* from migration_apply e order by id desc`,(err,result)=>{
+    if(err) throw err;
+    else res.render('show_migration',{result:result})
+  })
+})
+
+
+
+router.get('/all-contact',(req,res)=>{
+  pool.query(`select e.* from contact_us e order by id desc`,(err,result)=>{
+    if(err) throw err;
+    else res.render('show_contact',{result:result})
+  })
+})
+
+
+
+router.get('/migration/delete',(req,res)=>{
+  pool.query(`delete from migration_apply where id = '${req.query.id}'`,(err,result)=>{
+    if(err) throw err;
+    else res.redirect('/all-immigration');
+  })
+})
+
+
+
+router.get('/contact/delete',(req,res)=>{
+  pool.query(`delete from contact_us where id = '${req.query.id}'`,(err,result)=>{
+    if(err) throw err;
+    else res.redirect('/all-contact');
+  })
+})
+
 
 module.exports = router;

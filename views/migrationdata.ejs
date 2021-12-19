@@ -462,7 +462,7 @@ body{
         <div class="qodef-grid-row qodef-grid-normal-gutter">
         <div><span class="wpcf7-form-control-wrap your-name">
           <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
-          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <select name="Type of Visa" id="visa_type" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
               <option value="">Type of visa</option>
@@ -477,12 +477,12 @@ body{
           </select>
         </span></div>
         <div><span class="wpcf7-form-control-wrap your-email">
-          <input type=""  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Nationality" />
+          <input type="" id="nationality"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Nationality" />
         </span></div>
         <div><span class="wpcf7-form-control-wrap your-name">
           <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
           <label for="">Travelers:</label>
-          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <select name="Type of Visa" id="adult_travellers" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
            <option value="1">1 adult</option>
@@ -495,7 +495,7 @@ body{
            <option value="8">8 adults</option>
            <option value="9">9 adults</option>
           </select>
-          <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <select name="Type of Visa" id="children_travellers" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
           <option value="0">0 children</option>
@@ -509,8 +509,24 @@ body{
           <option value="8">8 children</option>
            </select>
         </span></div>
+
+
+        <div><span class="wpcf7-form-control-wrap your-email">
+          <label for="">Personal Information:</label>
+          <input type="" id="name"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Full Name" />
+        </span></div>
+
+
+
+        <div><span class="wpcf7-form-control-wrap your-email">
+          <input type="" id="number"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Mobile Number" />
+        </span></div>
+
+
+
+
       </div>
-      <input type="submit" value="Apply" class="wpcf7-form-control wpcf7-submit" />
+      <input type="button" value="Apply" class="wpcf7-form-control wpcf7-submit apply" />
     </div><div class="wpcf7-response-output" aria-hidden="true"></div>
   </form></div> </div>
     </div>
@@ -544,3 +560,36 @@ body{
             $('#contentcome').html(table)
         })
       </script>
+
+
+<script>
+	$('.apply').click(function(){
+
+
+
+
+if( $('#visa_type').val() == '' || $('#visa_type').val() == [] || $('#visa_type').val() == null || $('#visa_type').val() == 'null' ) alert('Select Type of Visa')
+else if( $('#nationality').val() == '' || $('#nationality').val() == [] || $('#nationality').val() == null || $('#nationality').val() == 'null' ) alert('Enter Your Nationality')
+else if( $('#name').val() == '' || $('#name').val() == [] || $('#name').val() == null || $('#name').val() == 'null' ) alert('Enter Full Name')
+else if( $('#number').val() == '' || $('#number').val() == [] || $('#number').val() == null || $('#number').val() == 'null' ) alert('Enter Mobile Number')
+
+else {
+let children_travellers = $('#children_travellers').val()
+let adult_travellers = $('#adult_travellers').val()
+let visa_type = $('#visa_type').val()
+let nationality = $('#nationality').val()
+let name = $('#name').val()
+let number = $('#number').val()
+
+
+
+$.post('/migrationdata/insert',{children_travellers,adult_travellers,visa_type,nationality,name,number},data=>{
+  alert('Successfully')
+})
+
+}
+
+
+
+	})
+</script>
