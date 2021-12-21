@@ -63,12 +63,12 @@
 
           <% for(i=0;i<result.length;i++) { %>
 <a href="/get/visa/<%=result[i].name%>">
-        <li style="margin:20px">
+        <li style="margin:20px;background-color: #172437;color: white;">
          <div>
           <img class="imgs" alt="UAE Tourist Visa" src="/images/<%=result[i].logo%>" class="lazy-loaded">
          </div>
          <h3>
-          <a id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl0_lnkTitle" title="UAE Tourist Visa" href="/get/visa/<%=result[i].name%>" tabindex="1"><%=result[i].name%></a></h3>
+          <a style="color: white;" id="ctl00_ContentPlaceHolder1_C001_masterBlogPostsFrontend_ctl00_ctl00_Repeater_ctrl0_lnkTitle" title="UAE Tourist Visa" href="/get/visa/<%=result[i].name%>" tabindex="1"><%=result[i].name%></a></h3>
          <span><em>From Aed</em> <%=result[i].service_charge%></span>
         </li>
 </a>
