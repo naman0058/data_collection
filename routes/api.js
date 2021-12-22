@@ -11,5 +11,4 @@ router.get('/get-top-banner',(req,res)=>{
     })
   })
 
-
 module.exports = router;

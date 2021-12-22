@@ -7,8 +7,9 @@ var pool = require('./pool')
 router.get('/', function(req, res, next) {
   var query = `select * from country;`
   var query1 = `select * from state;`
-  var query2 = `select * from tour order by id desc;`
-  pool.query(query+query1+query2,(err,result)=>{
+  var query2 = `select t.* , (select c.name from country c where c.id = t.countryid) as countryname from tour t order by id desc;`
+  var query3 = `select * from banner_image;`
+  pool.query(query+query1+query2+query3,(err,result)=>{
     if(err) throw err;
     else res.render('index', { title: 'Express',result });
   })
@@ -55,7 +56,7 @@ router.get('/immigration/:countryname/:1',(req,res)=>{
        
          let stateid = result[0].id;
          console.log(stateid)
-          res.render('migrationdata',{countryid,stateid})
+          res.render('migrationdata',{countryid,stateid,msg:'',name:req.params.countryname})
  
  
        }
@@ -501,9 +502,9 @@ router.post('/subscription-details-insert',(req,res)=>{
 })
 
 
-router.post('/tour-search',(req,res)=>{
+router.get('/tour-search',(req,res)=>{
   console.log(req.body)
-  pool.query(`select * from state where countryid = '${req.body.countryid}'`,(err,result)=>{
+  pool.query(`select * from state where countryid = '${req.query.id}'`,(err,result)=>{
     if(err) throw err;
     // else res.json(result)
     else res.render('state_show',{result})
@@ -512,7 +513,7 @@ router.post('/tour-search',(req,res)=>{
 
 
 router.get('/details/:name/tour-search',(req,res)=>{
-  pool.query(`select * from tour where stateid = '${req.params.name}'`,(err,result)=>{
+  pool.query(`select t.* , (select c.name from country c where c.id = t.countryid) as countryname from tour t where t.stateid = '${req.params.name}'`,(err,result)=>{
     if(err) throw err;
     else res.render('tour_show',{result})
   })

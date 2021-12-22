@@ -16,6 +16,7 @@ var visa = require('./routes/visa')
 var immigration_country = require('./routes/immigration_country');
 var immigration_subcategory = require('./routes/immigration_subcategory');
 var immigration_content = require('./routes/immigration_content');
+var banner_image = require('./routes/banner_image');
 
 // var about = require('./routes/about');
 
@@ -51,6 +52,7 @@ app.use('/add-visa',visa);
 app.use('/immigration_country',immigration_country)
 app.use('/immigration_subcategory',immigration_subcategory);
 app.use('/immigration_content',immigration_content);
+app.use('/banner_image',banner_image);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

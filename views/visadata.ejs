@@ -483,20 +483,15 @@ body{
        
 
     </div>
+ 
+ 
     <div class="qodef-grid-col-3">
       <div class="qodef-custom-nlf-sidearea">
-        <form action='/get-visa/<%=name%>/apply' method='post'>
-        <h4 class="qodef-custom-nlf-title"><%=msg%></h4><span class="qodef-custom-nlf-text"></span>
-
-        <h4 class="qodef-custom-nlf-title">Contact us</h4><span class="qodef-custom-nlf-text"></span>
+        <h4 class="qodef-custom-nlf-title">Apply Online</h4><span class="qodef-custom-nlf-text"></span>
         <div class="qodef-grid-row qodef-grid-normal-gutter">
         <div><span class="wpcf7-form-control-wrap your-name">
-          <input type="text" required name="name"  id='name' size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=" Name" />
-          <input type="email" required name="email" id="email"  size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Email " /> 
-          <input type="number" required name="number" id="number" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=" Contact no." /> 
-
-           
-          <!-- <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
+          <select name="Type of Visa" id="visa_type" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
               <option value="">Type of visa</option>
@@ -508,15 +503,15 @@ body{
               <option value="7763,10484">90 day UAE Express Visa</option>
               <option value="11162,11187">30 day UAE (Abu Dhabi) Tourist Visa</option>
               <option value="11163,11188">90 day UAE (Abu Dhabi) Tourist Visa</option>
-          </select> -->
+          </select>
         </span></div>
-        <!-- <div><span class="wpcf7-form-control-wrap your-email">
-          <input type=""  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Nationality" />
-        </span></div> -->
-        <!-- <div><span class="wpcf7-form-control-wrap your-name"> -->
+        <div><span class="wpcf7-form-control-wrap your-email">
+          <input type="" id="nationality"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Nationality" />
+        </span></div>
+        <div><span class="wpcf7-form-control-wrap your-name">
           <!-- <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="" /> -->
-          <!-- <label for="">Travelers:</label> -->
-          <!-- <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          <label for="">Travelers:</label>
+          <select name="Type of Visa" id="adult_travellers" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
            <option value="1">1 adult</option>
@@ -528,8 +523,8 @@ body{
            <option value="7">7 adults</option>
            <option value="8">8 adults</option>
            <option value="9">9 adults</option>
-          </select> -->
-          <!-- <select name="Type of Visa" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
+          </select>
+          <select name="Type of Visa" id="children_travellers" style="color: black;"  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" >
             
            
           <option value="0">0 children</option>
@@ -541,18 +536,33 @@ body{
           <option value="6">6 children</option>
           <option value="7">7 children</option>
           <option value="8">8 children</option>
-           </select> -->
-        <!-- </span></div>
-      </div> -->
-      <div><span class="wpcf7-form-control-wrap your-email">
-       
-      <label >  <p> <input type="checkbox">  Yes, send me the best deals by email</p></label>
-    </span>
-    </div>
-      <input type="submit" value="CONTACT ME" class="wpcf7-form-control wpcf7-submit" />
+           </select>
+        </span></div>
+
+
+        <div><span class="wpcf7-form-control-wrap your-email">
+          <label for="">Personal Information:</label>
+          <input type="" id="name"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Full Name" />
+        </span></div>
+
+
+
+        <div><span class="wpcf7-form-control-wrap your-email">
+          <input type="" id="number"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  placeholder="Mobile Number" />
+        </span></div>
+
+
+
+
+      </div>
+      <input type="button" value="Apply" class="wpcf7-form-control wpcf7-submit apply" />
     </div><div class="wpcf7-response-output" aria-hidden="true"></div>
   </form></div> </div>
-    </div>
+ 
+
+
+
+</div>
     </div>
     
     </div>
@@ -566,27 +576,39 @@ body{
 
 
   <%- include ('./footer.ejs') %>
+ 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
+ 
 
-    let name = $('#prices').val()
-    // alert(name)
-    // console/log()
-        $.post('/visa-details',{name},data=>{
-    
-          console.log(data)
-    
-          let table = `<span>
-            ${data[0].price_include}
-            </span>`
+<script>
+	$('.apply').click(function(){
 
 
-            let table1 = `<span>
-            ${data[0].apply_thing}
-            </span>`
-            $('#price_includes').html(table)
-            $('#applything').html(table1)
 
 
-        })
-      </script>
+if( $('#visa_type').val() == '' || $('#visa_type').val() == [] || $('#visa_type').val() == null || $('#visa_type').val() == 'null' ) alert('Select Type of Visa')
+else if( $('#nationality').val() == '' || $('#nationality').val() == [] || $('#nationality').val() == null || $('#nationality').val() == 'null' ) alert('Enter Your Nationality')
+else if( $('#name').val() == '' || $('#name').val() == [] || $('#name').val() == null || $('#name').val() == 'null' ) alert('Enter Full Name')
+else if( $('#number').val() == '' || $('#number').val() == [] || $('#number').val() == null || $('#number').val() == 'null' ) alert('Enter Mobile Number')
+
+else {
+let children_travellers = $('#children_travellers').val()
+let adult_travellers = $('#adult_travellers').val()
+let visa_type = $('#visa_type').val()
+let nationality = $('#nationality').val()
+let name = $('#name').val()
+let number = $('#number').val()
+
+
+
+$.post('/migrationdata/insert',{children_travellers,adult_travellers,visa_type,nationality,name,number},data=>{
+  alert('Successfully')
+})
+
+}
+
+
+
+	})
+</script>

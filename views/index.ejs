@@ -10,18 +10,16 @@
 <rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="background:#3fd0d3;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
 <rs-module id="rev_slider_2_1" style="" data-version="6.4.6">
 <rs-slides>
-<rs-slide data-key="rs-3" data-title="Slide" data-thumb="/design/wp-content/uploads/2018/09/h1-slider-img-1--100x50.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
+
+<% for(i=0;i<result[3].length;i++){ %>
+	<rs-slide data-key="rs-3" data-title="Slide" data-thumb="/design/wp-content/uploads/2018/09/h1-slider-img-1--100x50.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
 <img src="/images/dubai2.jpg" title="Travel Agency" class="rev-slidebg tp-rs-img" data-parallax="off" data-panzoom="d:10000;ss:100;se:110;" data-no-retina>
 <rs-layer id="slider-2-slide-3-layer-1" data-type="text" data-rsp_ch="on" data-xy="x:c;y:m;yo:-56px,-54px,-102px,-207px;" data-text="s:48,48,48,34;l:58,58,58,44;a:inherit;" data-dim="w:227px,auto,220px,auto;h:auto,auto,64px,auto;" data-padding="b:0,5,0,0;l:0,,5,5;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power2.inOut;sp:1000;sR:10;" data-frame_999="o:0;tp:600;st:w;sR:2990;" style="z-index:5;font-family:Satisfy;">Let's go now
 </rs-layer><rs-layer id="slider-2-slide-3-layer-2" data-type="text" data-rsp_ch="on" data-xy="x:c;y:m;yo:19px,20px,-38px,-164px;" data-text="s:120,120,70,35;l:126,126,86,31;ls:-6px,-5px,-4px,-1px;fw:600;a:inherit;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power2.inOut;st:220;sp:1000;sR:220;" data-frame_999="o:0;tp:600;st:w;sR:2780;" style="z-index:6;font-family:Poppins;">Explore and travel.
 </rs-layer><rs-layer id="slider-2-slide-3-layer-3" data-type="text" data-rsp_ch="on" data-xy="x:c;xo:0,0,0,584px;y:m;yo:132px,127px,57px,1px;" data-text="w:normal;s:20,20,18,15;l:26,26,26,21;a:center;" data-dim="w:757px,714px,651px,295px;h:53px,47px,auto,auto;" data-frame_0="o:1;tp:600;" data-frame_0_lines="d:5;y:50px;o:0;" data-frame_1="tp:600;e:power2.inOut;st:300;sp:1450;sR:300;" data-frame_1_lines="d:5;" data-frame_999="o:0;tp:600;st:w;sR:2250;" style="z-index:7;font-family:Poppins;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme
 </rs-layer> </rs-slide>
-<rs-slide data-key="rs-4" data-title="Slide" data-thumb="/design/wp-content/uploads/2018/09/h1-slider-img-2--100x50.jpg" data-in="o:0;e:power0.in;" data-out="a:false;">
-<img src="/images/dubai1.jpg" title="Travel Agency" class="rev-slidebg tp-rs-img" data-bg="p:right top;" data-parallax="off" data-panzoom="d:10000;ss:100;se:110;" data-no-retina>
-<rs-layer id="slider-2-slide-4-layer-21" data-type="text" data-rsp_ch="on" data-xy="x:c;y:m;yo:-56px,-56px,-105px,-207px;" data-text="s:48,48,48,34;l:58,58,58,44;a:inherit;" data-dim="w:251px,auto,246px,174px;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power2.inOut;sp:1000;sR:10;" data-frame_999="o:0;tp:600;st:w;sR:2990;" style="z-index:5;font-family:Satisfy;">Come with us
-</rs-layer><rs-layer id="slider-2-slide-4-layer-22" data-type="text" data-rsp_ch="on" data-xy="x:c;y:m;yo:19px,21px,-39px,-164px;" data-text="s:120,120,70,35;l:126,126,86,31;ls:-6px,-5px,-4px,-1px;fw:600;a:inherit;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power2.inOut;st:220;sp:1000;sR:220;" data-frame_999="o:0;tp:600;st:w;sR:2780;" style="z-index:6;font-family:Poppins;">Relax and Enjoy.
-</rs-layer><rs-layer id="slider-2-slide-4-layer-23" data-type="text" data-rsp_ch="on" data-xy="x:c;xo:0,0,0,480px;y:m;yo:131px,127px,55px,-10px;" data-text="w:normal;s:20,20,18,15;l:26,26,26,21;a:center;" data-dim="w:757px,714px,654px,295px;h:53px,47px,auto,auto;" data-frame_0="o:1;tp:600;" data-frame_0_lines="d:5;y:50px;o:0;" data-frame_1="tp:600;e:power2.inOut;st:300;sp:1450;sR:300;" data-frame_1_lines="d:5;" data-frame_999="o:0;tp:600;st:w;sR:2250;" style="z-index:7;font-family:Poppins;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme
-</rs-layer> </rs-slide>
+<% } %>
+
 </rs-slides>
 </rs-module>
 <script data-cfasync="false" src="https://cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
@@ -133,7 +131,7 @@
 <span class="qodef-tours-input-icon">
 <span class="icon_compass"></span>
 </span>
-<select class="qodef-tours-select-placeholder" name="countryid" id="countryid">
+<select class="qodef-tours-select-placeholder" name="countryid" id="mycountryid">
 
 	</select>
 </div>
@@ -192,8 +190,8 @@
 	
 	<div class="qodef-td-items tour">
 	<div class="qodef-tdi-image">
-	<img width="650" height="650" src="/images/<%=result[0][i].logo%>" class="attachment-setsail_select_image_square size-setsail_select_image_square wp-post-image" alt="c" loading="lazy" srcset="/images/<%=result[0][i].logo%> 1100w" sizes="(max-width: 650px) 100vw, 650px" />
-	 <a class="qodef-tdi-link" href="/details/<%=result[0][i].id%>/tour-search"></a>
+	<img style="width: 100%;height:300px;object-fit: cover;" src="/images/<%=result[0][i].logo%>" class="attachment-setsail_select_image_square size-setsail_select_image_square wp-post-image" alt="c" loading="lazy" srcset="/images/<%=result[0][i].logo%> 1100w" sizes="(max-width: 650px) 100vw, 650px" />
+	 <a class="qodef-tdi-link" href="/tour-search?id=<%=result[0][i].id%>"></a>
 	</div>
 	<div class="qodef-tdi-content-holder">
 	<div class="qodef-tdi-content-holder-outer">
@@ -347,15 +345,15 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 	
 	<!-- start here -->
 	
-	<% for(i=0;i<result.length;i++){ %>
+	<% for(i=0;i<result[2].length;i++){ %>
 	
 		<div class="qodef-tours-standard-item qodef-tours-row-item qodef-item-space post-3160 tour-item type-tour-item status-publish has-post-thumbnail hentry tour-category-europe tour-attribute-5-star-accommodation tour-attribute-airport-transfer-2 tour-attribute-breakfast tour-attribute-personal-guide">
 	<div class="qodef-tour-standard-item-holder">
 	<div class="qodef-tour-standard-item-holder-inner">
 	<div class="qodef-tours-standard-item-image-holder">
-	<a href="tour-item/corfu/index.html">
-	<img width="1100" height="650" src="/images/<%=result[1][i].logo%>" class="attachment-full size-full" alt="c" 
-	loading="lazy" srcset="/images/<%=result[1][i].logo%> 1100w, /images/<%=result[1][i].logo%> 300w, /images/<%=result[1][i].logo%> 768w, /images/<%=result[1][i].logo%> 1024w, /images/<%=result[1][i].logo%> 600w" sizes="(max-width: 1100px) 100vw, 1100px" /> </a>
+	<a href="/single/tour/details?id=<%=result[2][i].id%>">
+	<img style="width:287px;height: 170px;object-fit: cover;" src="/images/<%=result[2][i].logo%>" class="attachment-full size-full" alt="c" 
+	loading="lazy" srcset="/images/<%=result[2][i].logo%> 1100w, /images/<%=result[2][i].logo%> 300w, /images/<%=result[2][i].logo%> 768w, /images/<%=result[2][i].logo%> 1024w, /images/<%=result[2][i].logo%> 600w" sizes="(max-width: 1100px) 100vw, 1100px" /> </a>
 	</div>
 	<div class="qodef-tours-standard-item-content-holder">
 	<div class="qodef-tours-standard-item-top-content">
@@ -365,7 +363,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 	<span class="icon_calendar"></span>
 	</span>
 	<span class="qodef-tour-info-label">
-		<%=result[1][i].days%></span>
+		<%=result[2][i].days%></span>
 	</div>
 	</div>
 	<div class="qodef-tours-standard-item-top-item">
@@ -374,18 +372,18 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 	<span class="icon_profile"></span>
 	</span>
 	<span class="qodef-tour-info-label">
-		<%=result[1][i].person%>
+		<%=result[2][i].person%>
 	</span>
 	</div>
 	</div>
 	<div class="qodef-tours-list-item-top-item">
 	<div class="qodef-tours-tour-categories-holder">
 	<div class="qodef-tours-tour-categories-item">
-	<a href="tour-item/index8c96.html?type%5B%5D=europe">
+	<a href="/single/tour/details?id=<%=result[2][i].id%>">
 	<span class="qodef-tour-cat-item-icon">
 	<span aria-hidden="true" class="qodef-icon-font-elegant icon_pin_alt "></span> </span>
 	<span class="qodef-tour-cat-item-text">
-		<%=result[1][i].countryname%> </span>
+		<%=result[2][i].countryname%> </span>
 	</a>
 	</div>
 	</div>
@@ -394,14 +392,14 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 	<div class="qodef-tours-standard-item-content-inner">
 	<div class="qodef-tours-standard-item-title-holder">
 	<h4 class="qodef-tour-title">
-	<a href="tour-item/corfu/index.html"><%=result[1][i].name%></a>
+	<a href="/single/tour/details?id=<%=result[2][i].id%>"><%=result[2][i].name%></a>
 	</h4>
 	</div>
 	
 	<div class="qodef-tours-standard-item-price-and-rating-holder">
 	<span class="qodef-tours-item-price-holder">
 	<span class="qodef-tours-price-holder">
-	<span class="qodef-tours-item-price "><%=result[1][i].price%></span>
+	<span class="qodef-tours-item-price "><%=result[2][i].price%></span>
 	</span>
 	</span>
 	</div>
@@ -497,7 +495,7 @@ Special Offer </span>
 </span>
 </span>
 <div class="qodef-tours-gallery-item-image">
-<img width="1100" height="1365" src="/images/<%=result[0][i].logo%>" class="attachment-full size-full" alt="d" loading="lazy" srcset="/images/<%=result[0][i].logo%> 1100w, /images/<%=result[0][i].logo%> 242w, /images/<%=result[0][i].logo%> 768w, /images/<%=result[0][i].logo%> 825w, /images/<%=result[0][i].logo%> 600w" sizes="(max-width: 1100px) 100vw, 1100px" />
+<img style="width: 413px;height:512px;object-fit: cover;" src="/images/<%=result[0][i].logo%>" class="attachment-full size-full" alt="d" loading="lazy" srcset="/images/<%=result[0][i].logo%> 1100w, /images/<%=result[0][i].logo%> 242w, /images/<%=result[0][i].logo%> 768w, /images/<%=result[0][i].logo%> 825w, /images/<%=result[0][i].logo%> 600w" sizes="(max-width: 1100px) 100vw, 1100px" />
 <div class="qodef-tours-gallery-item-content-holder">
 <div class="qodef-tours-gallery-item-content-inner">
 <div class="qodef-tours-gallery-title-holder">
@@ -512,7 +510,7 @@ Special Offer </span>
 </div>
 </div>
 </div>
-<a class="qodef-tours-gallery-item-link" href="tour-item/varadero/index.html"></a>
+<a class="qodef-tours-gallery-item-link" href="/tour-search?id=<%=result[0][i].id%>"></a>
 </div>
 </div>
 
@@ -945,8 +943,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 	<div class="qodef-td-item qodef-item-space">
 <div class="qodef-tdi-content">
 <div class="qodef-tdi-image">
-<img width="650" height="650" src="/images/<%=result[0][i].logo%>" class="attachment-setsail_select_image_square size-setsail_select_image_square wp-post-image" alt="d" loading="lazy" srcset="/images/<%=result[0][i].logo%> 650w, /images/<%=result[0][i].logo%> 150w, /images/<%=result[0][i].logo%> 300w, /images/<%=result[0][i].logo%> 768w, /images/<%=result[0][i].logo%> 600w, /images/<%=result[0][i].logo%> 100w, /images/<%=result[0][i].logo%> 800w" sizes="(max-width: 650px) 100vw, 650px" /> </div>
-<a class="qodef-tdi-content-link" href="destinations/netherlands/index.html"></a>
+<img style="width: 353px;height:353px;object-fit: cover;" src="/images/<%=result[0][i].logo%>" class="attachment-setsail_select_image_square size-setsail_select_image_square wp-post-image" alt="d" loading="lazy" srcset="/images/<%=result[0][i].logo%> 650w, /images/<%=result[0][i].logo%> 150w, /images/<%=result[0][i].logo%> 300w, /images/<%=result[0][i].logo%> 768w, /images/<%=result[0][i].logo%> 600w, /images/<%=result[0][i].logo%> 100w, /images/<%=result[0][i].logo%> 800w" sizes="(max-width: 650px) 100vw, 650px" /> </div>
+<a class="qodef-tdi-content-link" href="/tour-search?id=<%=result[0][i].id%>"></a>
 <div class="qodef-destination-has-featured-mark">
 <span aria-hidden="true" class="qodef-icon-font-elegant icon_star "></span> </div>
 <div class="qodef-tdi-text">
@@ -989,8 +987,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 <% for(i=0;i<result[1].length;i++) { %>
 
 	<div class="qodef-cc-item qodef-item-space qodef-cci-has-link">
-<a itemprop="url" class="qodef-cc-link qodef-block-drag-link" href="#" target="_self">
-<img itemprop="image" class="qodef-cc-image" src="/images/<%=result[1][i].logo%>" alt="x" />
+<a itemprop="url" class="qodef-cc-link qodef-block-drag-link" href="details/<%=result[1][i].id%>/tour-search" target="_self">
+<img itemprop="image" class="qodef-cc-image" src="/images/<%=result[1][i].logo%>" style="width: 144px;height:194px;object-fit: cover;" alt="x" />
 <div class="qodef-cc-info">
 <h6 class="qodef-cc-info-title"><%=result[1][i].name%></h6>
 </div>
@@ -1022,29 +1020,5 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aene an commodo ligula
 </div> 
 
 <%- include ('./footer.ejs') %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	$.getJSON(`/country/show`, data => {
-    addgroup = data
-    console.log('leagues',data)
-    fillDropDown('countryid', data, 'Where to go', 0)
-  
-})
 
-
-
-function fillDropDown(id, data, label, selectedid = 0) {
-    $(`#${id}`).empty()
-    $(`#${id}`).append($('<option>').val("null").text(label))
-
-    $.each(data, (i, item) => {
-        if (item.id == selectedid) {
-            $(`#${id}`).append($('<option selected>').val(item.id).text(item.name))
-        } else {
-            $(`#${id}`).append($('<option>').val(item.id).text(item.name))
-        }
-    })
-}
-
-</script>
 
